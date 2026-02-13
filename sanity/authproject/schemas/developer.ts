@@ -2,27 +2,37 @@ import { defineType, defineField } from "sanity";
 
 const LANGUAGES = [
   { id: "hi", title: "Hindi" },
-  { id: "es", title: "Spanish" },
-  { id: "fr", title: "French" },
-  { id: "de", title: "German" },
-  { id: "zh", title: "Chinese" },
   { id: "ar", title: "Arabic" },
-  { id: "pt", title: "Portuguese" },
   { id: "ru", title: "Russian" },
-  { id: "ja", title: "Japanese" },
 ];
 
 export default defineType({
   name: "developer",
   title: "Developers",
   type: "document",
-
+  groups: [
+    { name: "content", title: "Content", default: true },
+    { name: "translations", title: "Translations" },
+  ],
   fields: [
+    defineField({
+      name: "supportedLanguages",
+      title: "Supported Languages",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
+      },
+      description: "Select which languages this content supports. English is always included.",
+      group: "content",
+    }),
+
     defineField({
       name: "name",
       title: "Developer Name",
       type: "string",
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
     defineField({
@@ -34,6 +44,7 @@ export default defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
     defineField({
@@ -41,6 +52,7 @@ export default defineType({
       title: "Developer Logo",
       type: "image",
       options: { hotspot: true },
+      group: "content",
     }),
 
     defineField({
@@ -49,6 +61,7 @@ export default defineType({
       type: "image",
       options: { hotspot: true },
       description: "Large image for developer hero section",
+      group: "content",
     }),
 
     defineField({
@@ -58,32 +71,16 @@ export default defineType({
       rows: 3,
       description: "This short text will appear on developer cards",
       validation: (Rule) => Rule.required().max(200),
+      group: "content",
     }),
-
-    ...LANGUAGES.map((lang) =>
-      defineField({
-        name: `shortDescription_${lang.id}`,
-        title: `Short Description (${lang.title})`,
-        type: "text",
-        rows: 3,
-      })
-    ),
 
     defineField({
       name: "about",
       title: "About Developer (English)",
       type: "text",
       rows: 5,
+      group: "content",
     }),
-
-    ...LANGUAGES.map((lang) =>
-      defineField({
-        name: `about_${lang.id}`,
-        title: `About Developer (${lang.title})`,
-        type: "text",
-        rows: 5,
-      })
-    ),
 
     defineField({
       name: "stats",
@@ -115,6 +112,7 @@ export default defineType({
           description: "e.g. Dubai",
         },
       ],
+      group: "content",
     }),
 
     defineField({
@@ -122,6 +120,28 @@ export default defineType({
       title: "Featured Developer",
       type: "boolean",
       initialValue: false,
+      group: "content",
     }),
+
+    ...LANGUAGES.flatMap((lang) => [
+      defineField({
+        name: `shortDescription_${lang.id}`,
+        title: `Short Description (${lang.title})`,
+        type: "text",
+        rows: 3,
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+      defineField({
+        name: `about_${lang.id}`,
+        title: `About Developer (${lang.title})`,
+        type: "text",
+        rows: 5,
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+    ]),
   ],
 });

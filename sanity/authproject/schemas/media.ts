@@ -1,19 +1,40 @@
 import { defineType, defineField } from "sanity";
 
+const LANGUAGES = [
+  { id: "hi", title: "Hindi" },
+  { id: "ar", title: "Arabic" },
+  { id: "ru", title: "Russian" },
+];
+
 export default defineType({
   name: "media",
   title: "Media",
   type: "document",
+  groups: [
+    { name: "content", title: "Content", default: true },
+    { name: "translations", title: "Translations" },
+  ],
   fields: [
-    // 1️⃣ TITLE (FIRST)
+    defineField({
+      name: "supportedLanguages",
+      title: "Supported Languages",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
+      },
+      description: "Select which languages this content supports. English is always included.",
+      group: "content",
+    }),
+
     defineField({
       name: "title",
       title: "Title",
       type: "string",
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
-    // 2️⃣ MEDIA TYPE (SECOND)
     defineField({
       name: "mediaType",
       title: "Media Type",
@@ -26,9 +47,9 @@ export default defineType({
         layout: "radio",
       },
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
-    // 3️⃣ IMAGES (ONLY IF IMAGE SELECTED)
     defineField({
       name: "images",
       title: "Images (Upload 2–4)",
@@ -48,9 +69,9 @@ export default defineType({
           .max(4)
           .error("Please upload between 1 and 4 images"),
       hidden: ({ parent }) => parent?.mediaType !== "image",
+      group: "content",
     }),
 
-    // 4️⃣ YOUTUBE LINK (ONLY IF VIDEO SELECTED)
     defineField({
       name: "youtubeUrl",
       title: "YouTube Video URL",
@@ -62,14 +83,26 @@ export default defineType({
           scheme: ["http", "https"],
         }),
       hidden: ({ parent }) => parent?.mediaType !== "youtube",
+      group: "content",
     }),
 
-    // 5️⃣ LOCATION (SHOW AFTER MEDIA TYPE SELECTED)
     defineField({
       name: "location",
       title: "Location / Address",
       type: "string",
       hidden: ({ parent }) => !parent?.mediaType,
+      group: "content",
     }),
+
+    ...LANGUAGES.flatMap((lang) => [
+      defineField({
+        name: `title_${lang.id}`,
+        title: `Title (${lang.title})`,
+        type: "string",
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+    ]),
   ],
 });

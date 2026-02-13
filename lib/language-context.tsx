@@ -4,17 +4,11 @@ import { createContext, useContext, useState, useCallback, ReactNode } from "rea
 
 import en from "@/messages/en.json";
 import hi from "@/messages/hi.json";
-import es from "@/messages/es.json";
-import fr from "@/messages/fr.json";
-import de from "@/messages/de.json";
-import zh from "@/messages/zh.json";
 import ar from "@/messages/ar.json";
-import pt from "@/messages/pt.json";
 import ru from "@/messages/ru.json";
-import ja from "@/messages/ja.json";
 
 const translations: Record<string, Record<string, string>> = {
-  en, hi, es, fr, de, zh, ar, pt, ru, ja,
+  en, hi, ar, ru,
 };
 
 type LanguageContextType = {

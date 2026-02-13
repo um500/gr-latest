@@ -1,16 +1,38 @@
 import { defineType, defineField } from "sanity";
 
+const LANGUAGES = [
+  { id: "hi", title: "Hindi" },
+  { id: "ar", title: "Arabic" },
+  { id: "ru", title: "Russian" },
+];
+
 export default defineType({
   name: "property",
   title: "Property",
   type: "document",
+  groups: [
+    { name: "content", title: "Content", default: true },
+    { name: "translations", title: "Translations" },
+  ],
   fields: [
-    // ================= BASIC =================
+    defineField({
+      name: "supportedLanguages",
+      title: "Supported Languages",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
+      },
+      description: "Select which languages this content supports. English is always included.",
+      group: "content",
+    }),
+
     defineField({
       name: "title",
       title: "Property Title",
       type: "string",
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
     defineField({
@@ -22,27 +44,27 @@ export default defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
-    // ================= DEVELOPER =================
     defineField({
       name: "developer",
       title: "Developer",
       type: "reference",
       to: [{ type: "developer" }],
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
-    // ================= LOCATION =================
     defineField({
       name: "location",
       title: "Community",
       type: "reference",
       to: [{ type: "community" }],
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
-    // ================= IMAGES =================
     defineField({
       name: "images",
       title: "Property Images",
@@ -53,9 +75,9 @@ export default defineType({
           options: { hotspot: true },
         },
       ],
+      group: "content",
     }),
 
-    // ================= BROCHURE PDF (NEW) =================
     defineField({
       name: "brochure",
       title: "Brochure PDF",
@@ -64,9 +86,9 @@ export default defineType({
         accept: ".pdf",
       },
       description: "Upload property brochure PDF here",
+      group: "content",
     }),
 
-    // ================= AVAILABLE UNITS =================
     defineField({
       name: "units",
       title: "Available Units",
@@ -93,22 +115,34 @@ export default defineType({
           ],
         },
       ],
+      group: "content",
     }),
 
-    // ================= HANDOVER =================
     defineField({
       name: "handover",
       title: "Handover Date",
       type: "string",
       description: "Example: September 2029",
+      group: "content",
     }),
 
-    // ================= FLAGS =================
     defineField({
       name: "featured",
       title: "Featured Property",
       type: "boolean",
       initialValue: false,
+      group: "content",
     }),
+
+    ...LANGUAGES.flatMap((lang) => [
+      defineField({
+        name: `title_${lang.id}`,
+        title: `Property Title (${lang.title})`,
+        type: "string",
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+    ]),
   ],
 });

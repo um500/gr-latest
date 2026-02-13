@@ -2,35 +2,38 @@ import { defineType, defineField } from "sanity";
 
 const LANGUAGES = [
   { id: "hi", title: "Hindi" },
-  { id: "es", title: "Spanish" },
-  { id: "fr", title: "French" },
-  { id: "de", title: "German" },
-  { id: "zh", title: "Chinese" },
   { id: "ar", title: "Arabic" },
-  { id: "pt", title: "Portuguese" },
   { id: "ru", title: "Russian" },
-  { id: "ja", title: "Japanese" },
 ];
 
 export default defineType({
   name: "blog",
   type: "document",
   title: "Blog",
+  groups: [
+    { name: "content", title: "Content", default: true },
+    { name: "translations", title: "Translations" },
+  ],
   fields: [
+    defineField({
+      name: "supportedLanguages",
+      title: "Supported Languages",
+      type: "array",
+      of: [{ type: "string" }],
+      options: {
+        list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
+      },
+      description: "Select which languages this content supports. English is always included.",
+      group: "content",
+    }),
+
     defineField({
       name: "title",
       title: "Title (English)",
       type: "string",
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
-
-    ...LANGUAGES.map((lang) =>
-      defineField({
-        name: `title_${lang.id}`,
-        title: `Title (${lang.title})`,
-        type: "string",
-      })
-    ),
 
     defineField({
       name: "slug",
@@ -41,43 +44,30 @@ export default defineType({
         maxLength: 96,
       },
       validation: (Rule) => Rule.required(),
+      group: "content",
     }),
 
     defineField({
       name: "subtitle",
       title: "Subtitle (English)",
       type: "string",
+      group: "content",
     }),
-
-    ...LANGUAGES.map((lang) =>
-      defineField({
-        name: `subtitle_${lang.id}`,
-        title: `Subtitle (${lang.title})`,
-        type: "string",
-      })
-    ),
 
     defineField({
       name: "excerpt",
       title: "Short Description (English)",
       type: "text",
       rows: 3,
+      group: "content",
     }),
-
-    ...LANGUAGES.map((lang) =>
-      defineField({
-        name: `excerpt_${lang.id}`,
-        title: `Short Description (${lang.title})`,
-        type: "text",
-        rows: 3,
-      })
-    ),
 
     defineField({
       name: "mainImage",
       title: "Main Image",
       type: "image",
       options: { hotspot: true },
+      group: "content",
     }),
 
     defineField({
@@ -88,9 +78,35 @@ export default defineType({
         { type: "block" },
         { type: "image", options: { hotspot: true } },
       ],
+      group: "content",
     }),
 
-    ...LANGUAGES.map((lang) =>
+    ...LANGUAGES.flatMap((lang) => [
+      defineField({
+        name: `title_${lang.id}`,
+        title: `Title (${lang.title})`,
+        type: "string",
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+      defineField({
+        name: `subtitle_${lang.id}`,
+        title: `Subtitle (${lang.title})`,
+        type: "string",
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+      defineField({
+        name: `excerpt_${lang.id}`,
+        title: `Short Description (${lang.title})`,
+        type: "text",
+        rows: 3,
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
       defineField({
         name: `content_${lang.id}`,
         title: `Blog Content (${lang.title})`,
@@ -99,7 +115,10 @@ export default defineType({
           { type: "block" },
           { type: "image", options: { hotspot: true } },
         ],
-      })
-    ),
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+    ]),
   ],
 });

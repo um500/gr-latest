@@ -11,14 +11,8 @@ import { useTranslation } from "@/lib/language-context";
 const LANGUAGES = [
   { code: "en", label: "English" },
   { code: "hi", label: "हिंदी" },
-  { code: "es", label: "Español" },
-  { code: "fr", label: "Français" },
-  { code: "de", label: "Deutsch" },
-  { code: "zh", label: "中文" },
   { code: "ar", label: "العربية" },
-  { code: "pt", label: "Português" },
   { code: "ru", label: "Русский" },
-  { code: "ja", label: "日本語" }
 ];
 
 export default function NavbarClient({

@@ -11,7 +11,8 @@ const query = `
   _id,
   name,
   shortDescription,
-  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
+  shortDescription_hi, shortDescription_ar, shortDescription_ru,
+  supportedLanguages,
   "slug": slug.current,
   logo
 }

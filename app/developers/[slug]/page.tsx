@@ -12,7 +12,8 @@ const developerWithProjectsQuery = `
   _id,
   name,
   about,
-  about_hi, about_es, about_fr, about_de, about_zh, about_ar, about_pt, about_ru, about_ja,
+  about_hi, about_ar, about_ru,
+  supportedLanguages,
   heroImage,
   stats,
   "properties": *[
@@ -21,6 +22,8 @@ const developerWithProjectsQuery = `
   ] | order(_createdAt desc){
     _id,
     title,
+    title_hi, title_ar, title_ru,
+    supportedLanguages,
     slug,
     location,
     handover,

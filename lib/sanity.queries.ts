@@ -7,9 +7,13 @@ import { groq } from "next-sanity";
 export const homepageHeroQuery = groq`
 *[_type == "homepage"][0]{
   heroCTA,
+  heroCTA_hi, heroCTA_ar, heroCTA_ru,
+  supportedLanguages,
   heroSlides[]{
     title,
+    title_hi, title_ar, title_ru,
     subtitle,
+    subtitle_hi, subtitle_ar, subtitle_ru,
     active,
     image{
       asset->{ url }
@@ -41,12 +45,16 @@ export const featuredPropertiesQuery = groq`
 [0..3]{
   _id,
   title,
+  title_hi, title_ar, title_ru,
+  supportedLanguages,
   "slug": slug.current,
   handover,
   featured,
 
   location->{
     name,
+    name_hi, name_ar, name_ru,
+    supportedLanguages,
     "slug": slug.current
   },
 
@@ -87,6 +95,8 @@ export const propertiesQuery = groq`
 | order(_createdAt desc){
   _id,
   title,
+  title_hi, title_ar, title_ru,
+  supportedLanguages,
   "slug": slug.current,
   featured,
   handover,
@@ -95,6 +105,8 @@ export const propertiesQuery = groq`
 
   location->{
     name,
+    name_hi, name_ar, name_ru,
+    supportedLanguages,
     "slug": slug.current
   },
 
@@ -122,6 +134,8 @@ export const propertyBySlugQuery = groq`
 *[_type == "property" && slug.current == $slug][0]{
   _id,
   title,
+  title_hi, title_ar, title_ru,
+  supportedLanguages,
   "slug": slug.current,
   handover,
   featured,
@@ -135,6 +149,8 @@ export const propertyBySlugQuery = groq`
 
   location->{
     name,
+    name_hi, name_ar, name_ru,
+    supportedLanguages,
     "slug": slug.current
   },
 
@@ -163,12 +179,16 @@ export const propertiesByDeveloperQuery = groq`
 | order(_createdAt desc){
   _id,
   title,
+  title_hi, title_ar, title_ru,
+  supportedLanguages,
   "slug": slug.current,
   handover,
   featured,
 
   location->{
     name,
+    name_hi, name_ar, name_ru,
+    supportedLanguages,
     "slug": slug.current
   },
 
@@ -200,7 +220,10 @@ export const featuredDevelopersQuery = groq`
   name,
   "slug": slug.current,
   shortDescription,
-  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
+  shortDescription_hi, shortDescription_ar, shortDescription_ru,
+  about,
+  about_hi, about_ar, about_ru,
+  supportedLanguages,
   "logo": logo.asset->url,
   "heroImage": heroImage.asset->url
 }
@@ -213,9 +236,32 @@ export const allDevelopersQuery = groq`
   name,
   "slug": slug.current,
   shortDescription,
-  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
+  shortDescription_hi, shortDescription_ar, shortDescription_ru,
+  about,
+  about_hi, about_ar, about_ru,
+  supportedLanguages,
   "logo": logo.asset->url,
   "heroImage": heroImage.asset->url
+}
+`;
+
+/* ======================================================
+   SINGLE DEVELOPER
+====================================================== */
+
+export const developerBySlugQuery = groq`
+*[_type == "developer" && slug.current == $slug][0]{
+  _id,
+  name,
+  "slug": slug.current,
+  shortDescription,
+  shortDescription_hi, shortDescription_ar, shortDescription_ru,
+  about,
+  about_hi, about_ar, about_ru,
+  supportedLanguages,
+  "logo": logo.asset->url,
+  "heroImage": heroImage.asset->url,
+  stats
 }
 `;
 
@@ -227,7 +273,10 @@ export const communitiesQuery = groq`
 *[_type == "community"]{
   _id,
   name,
+  name_hi, name_ar, name_ru,
   area,
+  area_hi, area_ar, area_ru,
+  supportedLanguages,
   "slug": slug.current
 }
 `;
@@ -237,7 +286,10 @@ export const searchSuggestionQuery = groq`
 | order(name asc){
   _id,
   name,
+  name_hi, name_ar, name_ru,
   area,
+  area_hi, area_ar, area_ru,
+  supportedLanguages,
   "slug": slug.current
 }
 `;
@@ -250,11 +302,12 @@ export const allBlogsQuery = groq`
 *[_type == "blog"]{
   _id,
   title,
-  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
+  title_hi, title_ar, title_ru,
   subtitle,
-  subtitle_hi, subtitle_es, subtitle_fr, subtitle_de, subtitle_zh, subtitle_ar, subtitle_pt, subtitle_ru, subtitle_ja,
+  subtitle_hi, subtitle_ar, subtitle_ru,
   excerpt,
-  excerpt_hi, excerpt_es, excerpt_fr, excerpt_de, excerpt_zh, excerpt_ar, excerpt_pt, excerpt_ru, excerpt_ja,
+  excerpt_hi, excerpt_ar, excerpt_ru,
+  supportedLanguages,
   "slug": slug.current,
   mainImage{
     asset->{ url }
@@ -266,11 +319,12 @@ export const getSingleBlogQuery = groq`
 *[_type == "blog" && slug.current == $slug][0]{
   _id,
   title,
-  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
+  title_hi, title_ar, title_ru,
   subtitle,
-  subtitle_hi, subtitle_es, subtitle_fr, subtitle_de, subtitle_zh, subtitle_ar, subtitle_pt, subtitle_ru, subtitle_ja,
+  subtitle_hi, subtitle_ar, subtitle_ru,
   content,
-  content_hi, content_es, content_fr, content_de, content_zh, content_ar, content_pt, content_ru, content_ja,
+  content_hi, content_ar, content_ru,
+  supportedLanguages,
   mainImage{
     asset->{ url }
   }
@@ -286,6 +340,8 @@ export const mediaQuery = groq`
 | order(_createdAt desc){
   _id,
   title,
+  title_hi, title_ar, title_ru,
+  supportedLanguages,
   mediaType,
   location,
   images[]{ asset->{ url } },
@@ -301,10 +357,12 @@ export const announcementQuery = groq`
 *[_type == "announcement"]
 | order(_createdAt desc){
   title,
-  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
+  title_hi, title_ar, title_ru,
   eventDate,
   city,
-  city_hi, city_es, city_fr, city_de, city_zh, city_ar, city_pt, city_ru, city_ja,
+  city_hi, city_ar, city_ru,
+  supportedLanguages,
   "slug": slug.current
 }
 `;
+
