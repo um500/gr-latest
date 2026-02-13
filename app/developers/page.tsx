@@ -1,29 +1,29 @@
 import { sanityClient } from "@/lib/sanity.client";
 import { urlFor } from "@/lib/sanity.image";
-import Link from "next/link";
 import Image from "next/image";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
 import T from "@/components/ui/T";
+import DeveloperCardClient from "@/components/sections/DeveloperCardClient";
 
-/* ================= SANITY QUERY ================= */
 const query = `
 *[_type == "developer"] | order(name asc){
   _id,
   name,
   shortDescription,
+  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
   "slug": slug.current,
   logo
 }
 `;
 
-/* ================= TYPES ================= */
 type Developer = {
   _id: string;
   name: string;
   shortDescription?: string;
   slug: string;
   logo?: any;
+  [key: string]: any;
 };
 
 export default async function DevelopersPage() {
@@ -32,7 +32,6 @@ export default async function DevelopersPage() {
   return (
     <main className="bg-white dark:bg-[#0f172a] transition-colors duration-300">
 
-      {/* ================= DEVELOPERS HERO ================= */}
       <section className="relative h-[70vh] w-full overflow-hidden">
         <Image
           src="/assets/hero-2.jpg"
@@ -61,10 +60,8 @@ export default async function DevelopersPage() {
         </div>
       </section>
 
-      {/* ================= DEVELOPERS SECTION ================= */}
       <section className="py-20 px-6 max-w-7xl mx-auto">
 
-        {/* HEADING */}
         <div className="text-center mb-14">
           <p className="text-[#C9A227] uppercase tracking-widest text-sm">
             <T k="developersPage.ourDevelopers" />
@@ -79,54 +76,17 @@ export default async function DevelopersPage() {
           </p>
         </div>
 
-        {/* GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10">
           {developers.map((dev) => (
-            <div
+            <DeveloperCardClient
               key={dev._id}
-              className="group rounded-2xl overflow-hidden bg-white shadow-md hover:shadow-2xl transition duration-300"
-            >
-              {/* IMAGE */}
-              <div className="relative h-56 w-full bg-gray-100 overflow-hidden">
-                {dev.logo ? (
-                  <Image
-                    src={urlFor(dev.logo).width(600).quality(85).url()}
-                    alt={dev.name}
-                    fill
-                    className="object-cover group-hover:scale-105 transition duration-500"
-                  />
-                ) : (
-                  <div className="flex h-full items-center justify-center text-gray-400">
-                    <T k="developersPage.noImage" />
-                  </div>
-                )}
-              </div>
-
-              {/* CONTENT */}
-              <div className="p-6">
-                <h3 className="text-xl font-semibold text-gray-900">
-                  {dev.name}
-                </h3>
-
-                {dev.shortDescription && (
-                  <p className="text-sm text-gray-700 mt-3 line-clamp-3">
-                    {dev.shortDescription}
-                  </p>
-                )}
-
-                <Link
-                  href={`/developers/${dev.slug}`}
-                  className="inline-flex items-center mt-5 text-[#C9A227] font-medium hover:underline"
-                >
-                  <T k="developersPage.viewProjects" />
-                </Link>
-              </div>
-            </div>
+              developer={dev}
+              logoUrl={dev.logo ? urlFor(dev.logo).width(600).quality(85).url() : undefined}
+            />
           ))}
         </div>
       </section>
 
-      {/* ================= CTA ================= */}
       <CTA />
       <Footer />
 

@@ -3,6 +3,7 @@ import { sanityClient } from "@/lib/sanity.client";
 import { notFound } from "next/navigation";
 import { urlFor } from "@/lib/sanity.image";
 import DeveloperProjectsClient from "@/components/sections/DeveloperProjectsClient";
+import DeveloperAboutClient from "@/components/sections/DeveloperAboutClient";
 import T from "@/components/ui/T";
 
 /* ================= SANITY QUERY ================= */
@@ -11,6 +12,7 @@ const developerWithProjectsQuery = `
   _id,
   name,
   about,
+  about_hi, about_es, about_fr, about_de, about_zh, about_ar, about_pt, about_ru, about_ja,
   heroImage,
   stats,
   "properties": *[
@@ -156,17 +158,7 @@ export default async function DeveloperPage({
       )}
 
       {/* ================= ABOUT ================= */}
-     <section className="py-20 bg-white dark:bg-black transition-colors duration-300">
-        <div className="max-w-7xl mx-auto px-6">
-          <h2 className="text-3xl font-bold mb-6">
-            <><T k="developerDetail.about" /> {developer.name}</>
-          </h2>
-
-          <p className="text-gray-600 leading-relaxed max-w-4xl">
-            {developer.about}
-          </p>
-        </div>
-      </section>
+      <DeveloperAboutClient developer={developer} />
 
       {/* ================= PROJECTS ================= */}
     <section id="projects" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-300">

@@ -1,5 +1,17 @@
 import { defineType, defineField } from "sanity";
 
+const LANGUAGES = [
+  { id: "hi", title: "Hindi" },
+  { id: "es", title: "Spanish" },
+  { id: "fr", title: "French" },
+  { id: "de", title: "German" },
+  { id: "zh", title: "Chinese" },
+  { id: "ar", title: "Arabic" },
+  { id: "pt", title: "Portuguese" },
+  { id: "ru", title: "Russian" },
+  { id: "ja", title: "Japanese" },
+];
+
 export default defineType({
   name: "developer",
   title: "Developers",
@@ -39,25 +51,40 @@ export default defineType({
       description: "Large image for developer hero section",
     }),
 
-    // 🔥 CARD DESCRIPTION (Homepage)
     defineField({
       name: "shortDescription",
-      title: "Short Description (Card)",
+      title: "Short Description (English)",
       type: "text",
       rows: 3,
       description: "This short text will appear on developer cards",
       validation: (Rule) => Rule.required().max(200),
     }),
 
-    // 🔥 FULL ABOUT (Developer Page)
+    ...LANGUAGES.map((lang) =>
+      defineField({
+        name: `shortDescription_${lang.id}`,
+        title: `Short Description (${lang.title})`,
+        type: "text",
+        rows: 3,
+      })
+    ),
+
     defineField({
       name: "about",
-      title: "About Developer",
+      title: "About Developer (English)",
       type: "text",
       rows: 5,
     }),
 
-    // 🔥 STATS SECTION
+    ...LANGUAGES.map((lang) =>
+      defineField({
+        name: `about_${lang.id}`,
+        title: `About Developer (${lang.title})`,
+        type: "text",
+        rows: 5,
+      })
+    ),
+
     defineField({
       name: "stats",
       title: "Developer Stats",
@@ -90,7 +117,6 @@ export default defineType({
       ],
     }),
 
-    // 🔥 FEATURED (TOP 4 ON HOME)
     defineField({
       name: "featured",
       title: "Featured Developer",

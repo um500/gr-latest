@@ -200,6 +200,7 @@ export const featuredDevelopersQuery = groq`
   name,
   "slug": slug.current,
   shortDescription,
+  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
   "logo": logo.asset->url,
   "heroImage": heroImage.asset->url
 }
@@ -212,6 +213,7 @@ export const allDevelopersQuery = groq`
   name,
   "slug": slug.current,
   shortDescription,
+  shortDescription_hi, shortDescription_es, shortDescription_fr, shortDescription_de, shortDescription_zh, shortDescription_ar, shortDescription_pt, shortDescription_ru, shortDescription_ja,
   "logo": logo.asset->url,
   "heroImage": heroImage.asset->url
 }

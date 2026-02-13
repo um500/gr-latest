@@ -41,7 +41,12 @@ export default function DeveloperSection({
 }: {
   developers: Developer[];
 }) {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
+
+  const getLocalized = (item: any, field: string) => {
+    if (lang === "en") return item[field];
+    return item[`${field}_${lang}`] || item[field];
+  };
 
   if (!developers?.length) return null;
 
@@ -109,7 +114,7 @@ export default function DeveloperSection({
                   </h3>
 
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-3 line-clamp-3 flex-1">
-                    {dev.shortDescription ||
+                    {getLocalized(dev, "shortDescription") ||
                       t("developer.defaultDescription")}
                   </p>
 
