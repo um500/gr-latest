@@ -10,11 +10,9 @@
   "nav.media": "Медиа",
   "nav.enquireNow": "Отправить Запрос",
   "nav.grPremiumProperties": "GR Premium Properties",
-
   "hero.search": "Поиск",
   "hero.communityOrBuilding": "Сообщество или здание",
   "hero.loading": "Загрузка основного контента…",
-
   "about.whyGrPremium": "Почему GR Premium",
   "about.whyChooseGrPremium": "Почему стоит выбрать GR Premium?",
   "about.description": "С более чем 15-летним опытом на рынке недвижимости Дубая мы предоставляем непревзойденный сервис и доступ к эксклюзивной недвижимости, соответствующей вашему стилю жизни и инвестиционным целям.",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "Прозрачное ценообразование без скрытых расходов",
   "about.feature.postPurchase": "Постпродажная поддержка и управление недвижимостью",
   "about.feature.multilingualTeam": "Многоязычная команда, обслуживающая клиентов по всему миру",
-
   "property.projects": "Проекты",
   "property.featuredProperties": "Избранная Недвижимость",
   "property.description": "Откройте для себя нашу тщательно подобранную коллекцию премиальных проектов недвижимости.",
@@ -38,14 +35,12 @@
   "property.enquire": "Запросить",
   "property.handover": "Передача",
   "property.bed": "Спальня",
-
   "developer.developers": "Застройщики",
   "developer.trustedDevelopers": "Надежные Застройщики",
   "developer.description": "Мы сотрудничаем с авторитетными застройщиками, известными качеством, прозрачностью и своевременной сдачей объектов.",
   "developer.viewProjects": "Посмотреть Проекты",
   "developer.viewAllDevelopers": "Все Застройщики →",
   "developer.defaultDescription": "Откройте для себя премиальные проекты этого надежного застройщика, известного качественным строительством и своевременной сдачей.",
-
   "blog.blogs": "Блоги",
   "blog.latestBlogs": "Последние Блоги",
   "blog.description": "Аналитика, новости и обновления рынка недвижимости",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "Последние аналитические материалы, обновления и истории о недвижимости",
   "blog.noBlogsFound": "Блоги не найдены",
   "blog.checkBackLater": "Пожалуйста, загляните позже.",
-
   "testimonial.clientReviews": "Отзывы Клиентов",
   "testimonial.whatOurClientsSay": "Что Говорят Наши Клиенты",
-
   "cta.title": "Готовы найти недвижимость своей мечты?",
   "cta.description": "Позвольте нашим экспертам помочь вам найти идеальную инвестиционную возможность на динамично развивающемся рынке недвижимости Дубая.",
   "cta.scheduleConsultation": "Записаться на Консультацию",
-
   "footer.grPremium": "GR Premium",
   "footer.propertiesLlc": "Properties LLC",
   "footer.description": "Ваш надежный партнер в поиске элитной недвижимости в Дубае и за его пределами.",
@@ -75,7 +67,6 @@
   "footer.townhouses": "Таунхаусы",
   "footer.enquireNow": "Отправить Запрос",
   "footer.copyright": "© 2026 GR Premium Properties. Все права защищены.",
-
   "contact.getInTouch": "СВЯЖИТЕСЬ С НАМИ",
   "contact.contactUs": "Связаться с Нами",
   "contact.heroDescription": "Начните свой путь в недвижимости с уверенностью.",
@@ -87,7 +78,6 @@
   "contact.workingHours": "Рабочие Часы",
   "contact.sendUsEnquiry": "Отправьте Нам Запрос",
   "contact.consent": "Я разрешаю представителям компании связаться со мной по поводу её продуктов и предложений.",
-
   "form.fullName": "Полное Имя",
   "form.enterFullName": "Введите ваше полное имя",
   "form.email": "Эл. Почта",
@@ -105,9 +95,7 @@
   "form.consent": "Я разрешаю представителям компании звонить, отправлять SMS, электронные письма или сообщения в WhatsApp.",
   "form.successMessage": "Запрос успешно отправлен ✅",
   "form.errorMessage": "Что-то пошло не так. Пожалуйста, попробуйте снова ❌",
-
   "enquiryModal.title": "Отправьте Ваш Запрос",
-
   "properties.findDreamProperty": "Найдите Недвижимость Своей Мечты",
   "properties.heroDescription": "Элитные дома и премиальные инвестиции в Дубае",
   "properties.noPropertiesFound": "Объекты не найдены",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "Макс. Цена",
   "properties.find": "Найти",
   "properties.reset": "Сбросить",
-
   "howItWorks.ourProcess": "НАШ ПРОЦЕСС",
   "howItWorks.title": "Как Это Работает",
   "howItWorks.description": "Наш оптимизированный процесс делает покупку недвижимости в Дубае простой, прозрачной и без стресса.",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "Устранение дефектов и недочетов",
   "howItWorks.step4Point3": "Услуги управления недвижимостью",
   "howItWorks.step4Point4": "Помощь в аренде и перепродаже",
-
   "aboutPage.whoWeAre": "КТО МЫ",
   "aboutPage.title": "О GR Premium Properties",
   "aboutPage.heroDescription": "Более 15 лет мы помогаем инвесторам и покупателям найти идеальную недвижимость в Дубае и ОАЭ.",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "Рыночный Аналитик",
   "aboutPage.customerSupport": "Служба Поддержки",
   "aboutPage.operationsManager": "Операционный Директор",
-
   "developersPage.ourPartners": "Наши Партнеры",
   "developersPage.heroTitle": "Ведущие Застройщики Дубая",
   "developersPage.heroDescription": "Мы сотрудничаем с самыми надежными застройщиками Дубая, чтобы предложить вам жилую и коммерческую недвижимость мирового класса для роскошной жизни и высокой доходности инвестиций.",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "Мы работаем с самыми надежными и авторитетными застройщиками Дубая, предлагая премиальные жилые и коммерческие проекты.",
   "developersPage.viewProjects": "Посмотреть Проекты →",
   "developersPage.noImage": "Нет Изображения",
-
   "media.title": "Медиа",
   "media.subtitle": "Изображения и Видео",
   "media.image": "Изображение",
   "media.video": "Видео",
-
   "developerDetail.ourPartner": "Наш Партнёр",
   "developerDetail.heroDescription": "Премиальный застройщик, формирующий горизонт Дубая",
   "developerDetail.viewProjects": "Посмотреть проекты",
@@ -213,7 +196,6 @@
   "developerDetail.about": "О компании",
   "developerDetail.projectsBy": "Проекты",
   "developerDetail.noProjectsYet": "Проекты пока не добавлены.",
-
   "brochure.downloadBrochure": "Скачать Брошюру",
   "brochure.fullName": "Полное имя",
   "brochure.emailAddress": "Электронная почта",
@@ -231,5 +213,11 @@
   "country.uk": "Великобритания",
   "country.us": "США",
   "country.saudiArabia": "Саудовская Аравия",
-  "country.other": "Другое"
+  "country.other": "Другое",
+  "testimonial.review": "отзыв",
+  "testimonial.reviews": "отзывов",
+  "testimonial.monthsAgo": "месяцев назад",
+  "testimonial.review1": "У меня был действительно отличный опыт работы с ними. С самого начала команда была профессиональной, прозрачной и чрезвычайно поддерживающей. Все они очень трудолюбивы и настроены очень позитивно.",
+  "testimonial.review2": "Приветливые люди и безупречные инвестиционные услуги. Ценю это.",
+  "testimonial.review3": "Профессиональная и гостеприимная среда, предоставляющая отличный сервис и прикладывающая дополнительные усилия для клиентов."
 }

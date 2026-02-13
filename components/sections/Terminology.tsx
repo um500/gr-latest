@@ -12,29 +12,42 @@ interface TestimonialItem {
   avatarInitial: string;
 }
 
-const testimonials: TestimonialItem[] = [
+interface TestimonialData {
+  id: number;
+  name: string;
+  textKey: string;
+  rating: number;
+  reviewCount: number;
+  monthsAgo: number;
+  avatarInitial: string;
+}
+
+const testimonialData: TestimonialData[] = [
   {
     id: 1,
     name: "Anzu Chaudhary",
-    text: "I had a truly excellent experience with them. From the very beginning, the team was professional, transparent, and extremely supportive. All of them are very hard workers and carrying with very positive attitude.",
+    textKey: "testimonial.review1",
     rating: 5,
-    meta: "5 reviews · 4 months ago",
+    reviewCount: 5,
+    monthsAgo: 4,
     avatarInitial: "A",
   },
   {
     id: 2,
     name: "Parul Singh",
-    text: "Cordial people and seamless investment services. Appreciate it.",
+    textKey: "testimonial.review2",
     rating: 5,
-    meta: "1 review · 4 months ago",
+    reviewCount: 1,
+    monthsAgo: 4,
     avatarInitial: "P",
   },
   {
     id: 3,
     name: "Sirine Zaghdoudi",
-    text: "A professional and welcoming environment provides excellent service and goes the extra mile for clients.",
+    textKey: "testimonial.review3",
     rating: 5,
-    meta: "2 reviews · 4 months ago",
+    reviewCount: 2,
+    monthsAgo: 4,
     avatarInitial: "S",
   },
 ];
@@ -68,6 +81,15 @@ export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const { t } = useTranslation();
+
+  const testimonials: TestimonialItem[] = testimonialData.map((d) => ({
+    id: d.id,
+    name: d.name,
+    text: t(d.textKey),
+    rating: d.rating,
+    meta: `${d.reviewCount} ${d.reviewCount === 1 ? t("testimonial.review") : t("testimonial.reviews")} · ${d.monthsAgo} ${t("testimonial.monthsAgo")}`,
+    avatarInitial: d.avatarInitial,
+  }));
 
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {

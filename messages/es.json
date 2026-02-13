@@ -10,11 +10,9 @@
   "nav.media": "Medios",
   "nav.enquireNow": "Consultar Ahora",
   "nav.grPremiumProperties": "GR Premium Properties",
-
   "hero.search": "Buscar",
   "hero.communityOrBuilding": "Comunidad o Edificio",
   "hero.loading": "Cargando contenido principal…",
-
   "about.whyGrPremium": "Por Qué GR Premium",
   "about.whyChooseGrPremium": "¿Por Qué Elegir GR Premium?",
   "about.description": "Con más de 15 años de experiencia en el mercado inmobiliario de Dubái, ofrecemos un servicio incomparable y acceso a propiedades exclusivas que se ajustan a su estilo de vida y objetivos de inversión.",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "Precios transparentes sin costos ocultos",
   "about.feature.postPurchase": "Soporte post-compra y gestión de propiedades",
   "about.feature.multilingualTeam": "Equipo multilingüe al servicio de clientes en todo el mundo",
-
   "property.projects": "Proyectos",
   "property.featuredProperties": "Propiedades Destacadas",
   "property.description": "Descubra nuestra selección exclusiva de proyectos inmobiliarios premium.",
@@ -38,14 +35,12 @@
   "property.enquire": "Consultar",
   "property.handover": "Entrega",
   "property.bed": "Hab.",
-
   "developer.developers": "Desarrolladores",
   "developer.trustedDevelopers": "Desarrolladores de Confianza",
   "developer.description": "Nos asociamos con desarrolladores de renombre conocidos por su calidad, transparencia y entrega puntual.",
   "developer.viewProjects": "Ver Proyectos",
   "developer.viewAllDevelopers": "Ver Todos los Desarrolladores →",
   "developer.defaultDescription": "Explore proyectos premium de este desarrollador inmobiliario de confianza, conocido por su construcción de calidad y entrega puntual.",
-
   "blog.blogs": "Blogs",
   "blog.latestBlogs": "Últimos Blogs",
   "blog.description": "Perspectivas, noticias y actualizaciones inmobiliarias",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "Últimas perspectivas, actualizaciones e historias inmobiliarias",
   "blog.noBlogsFound": "No se encontraron blogs",
   "blog.checkBackLater": "Por favor, vuelva más tarde.",
-
   "testimonial.clientReviews": "Reseñas de Clientes",
   "testimonial.whatOurClientsSay": "Lo Que Dicen Nuestros Clientes",
-
   "cta.title": "¿Listo para Encontrar la Propiedad de Sus Sueños?",
   "cta.description": "Deje que nuestros expertos le guíen hacia la oportunidad de inversión perfecta en el próspero mercado inmobiliario de Dubái.",
   "cta.scheduleConsultation": "Programar una Consulta",
-
   "footer.grPremium": "GR Premium",
   "footer.propertiesLlc": "Properties LLC",
   "footer.description": "Su socio de confianza para encontrar propiedades de lujo en Dubái y más allá.",
@@ -75,7 +67,6 @@
   "footer.townhouses": "Casas Adosadas",
   "footer.enquireNow": "Consultar Ahora",
   "footer.copyright": "© 2026 GR Premium Properties. Todos los derechos reservados.",
-
   "contact.getInTouch": "CONTÁCTENOS",
   "contact.contactUs": "Contáctenos",
   "contact.heroDescription": "Comience su viaje inmobiliario con confianza.",
@@ -87,7 +78,6 @@
   "contact.workingHours": "Horario de Trabajo",
   "contact.sendUsEnquiry": "Envíenos una Consulta",
   "contact.consent": "Autorizo a los representantes de la empresa a contactarme sobre sus productos y ofertas.",
-
   "form.fullName": "Nombre Completo",
   "form.enterFullName": "Ingrese su nombre completo",
   "form.email": "Correo Electrónico",
@@ -105,9 +95,7 @@
   "form.consent": "Autorizo a los representantes de la empresa a llamarme, enviarme SMS, correo electrónico o WhatsApp.",
   "form.successMessage": "Consulta enviada exitosamente ✅",
   "form.errorMessage": "Algo salió mal. Por favor, inténtelo de nuevo ❌",
-
   "enquiryModal.title": "Envíe Su Consulta",
-
   "properties.findDreamProperty": "Encuentre la Propiedad de Sus Sueños",
   "properties.heroDescription": "Hogares de lujo e inversiones premium en Dubái",
   "properties.noPropertiesFound": "No se encontraron propiedades",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "Precio Máximo",
   "properties.find": "Buscar",
   "properties.reset": "Reiniciar",
-
   "howItWorks.ourProcess": "NUESTRO PROCESO",
   "howItWorks.title": "Cómo Funciona",
   "howItWorks.description": "Nuestro proceso simplificado hace que comprar propiedades en Dubái sea simple, transparente y sin estrés.",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "Resolución de defectos y acabados",
   "howItWorks.step4Point3": "Servicios de gestión de propiedades",
   "howItWorks.step4Point4": "Asistencia en alquiler y reventa",
-
   "aboutPage.whoWeAre": "QUIÉNES SOMOS",
   "aboutPage.title": "Sobre GR Premium Properties",
   "aboutPage.heroDescription": "Durante más de 15 años, hemos ayudado a inversores y compradores a encontrar su propiedad perfecta en Dubái y los EAU.",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "Analista de Mercado",
   "aboutPage.customerSupport": "Atención al Cliente",
   "aboutPage.operationsManager": "Gerente de Operaciones",
-
   "developersPage.ourPartners": "Nuestros Socios",
   "developersPage.heroTitle": "Principales Desarrolladores Inmobiliarios en Dubái",
   "developersPage.heroDescription": "Colaboramos con los desarrolladores más confiables de Dubái para ofrecerle propiedades residenciales y comerciales de clase mundial diseñadas para una vida de lujo y altos rendimientos de inversión.",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "Trabajamos con los desarrolladores más confiables y reputados de Dubái para ofrecerle proyectos residenciales y comerciales premium.",
   "developersPage.viewProjects": "Ver Proyectos →",
   "developersPage.noImage": "Sin Imagen",
-
   "media.title": "Medios",
   "media.subtitle": "Imágenes y Videos",
   "media.image": "Imagen",
   "media.video": "Video",
-
   "developerDetail.ourPartner": "Nuestro Socio",
   "developerDetail.heroDescription": "Promotor inmobiliario premium que da forma al horizonte de Dubái",
   "developerDetail.viewProjects": "Ver Proyectos",
@@ -213,7 +196,6 @@
   "developerDetail.about": "Acerca de",
   "developerDetail.projectsBy": "Proyectos de",
   "developerDetail.noProjectsYet": "Aún no se han añadido proyectos.",
-
   "brochure.downloadBrochure": "Descargar Folleto",
   "brochure.fullName": "Nombre Completo",
   "brochure.emailAddress": "Correo Electrónico",
@@ -231,5 +213,11 @@
   "country.uk": "Reino Unido",
   "country.us": "Estados Unidos",
   "country.saudiArabia": "Arabia Saudita",
-  "country.other": "Otro"
+  "country.other": "Otro",
+  "testimonial.review": "reseña",
+  "testimonial.reviews": "reseñas",
+  "testimonial.monthsAgo": "meses atrás",
+  "testimonial.review1": "Tuve una experiencia verdaderamente excelente con ellos. Desde el principio, el equipo fue profesional, transparente y extremadamente solidario. Todos son muy trabajadores y tienen una actitud muy positiva.",
+  "testimonial.review2": "Personas cordiales y servicios de inversión impecables. Lo aprecio.",
+  "testimonial.review3": "Un ambiente profesional y acogedor que brinda un excelente servicio y hace un esfuerzo adicional por los clientes."
 }

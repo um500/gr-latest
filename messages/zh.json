@@ -10,11 +10,9 @@
   "nav.media": "媒体",
   "nav.enquireNow": "立即咨询",
   "nav.grPremiumProperties": "GR Premium Properties",
-
   "hero.search": "搜索",
   "hero.communityOrBuilding": "社区或楼盘",
   "hero.loading": "主要内容加载中…",
-
   "about.whyGrPremium": "为什么选择 GR Premium",
   "about.whyChooseGrPremium": "为什么选择 GR Premium？",
   "about.description": "凭借在迪拜房地产市场超过15年的经验，我们提供无与伦比的服务，并为您提供符合您生活方式和投资目标的独家房产。",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "透明定价，无隐藏费用",
   "about.feature.postPurchase": "购后支持和物业管理",
   "about.feature.multilingualTeam": "多语言团队服务全球客户",
-
   "property.projects": "项目",
   "property.featuredProperties": "精选房产",
   "property.description": "发现我们精心挑选的优质房地产项目。",
@@ -38,14 +35,12 @@
   "property.enquire": "咨询",
   "property.handover": "交房",
   "property.bed": "卧室",
-
   "developer.developers": "开发商",
   "developer.trustedDevelopers": "值得信赖的开发商",
   "developer.description": "我们与以质量、透明度和准时交付著称的知名开发商合作。",
   "developer.viewProjects": "查看项目",
   "developer.viewAllDevelopers": "查看所有开发商 →",
   "developer.defaultDescription": "探索这家值得信赖的房地产开发商的优质项目，以优质建筑和准时交付著称。",
-
   "blog.blogs": "博客",
   "blog.latestBlogs": "最新博客",
   "blog.description": "洞察、新闻和房地产动态",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "最新洞察、动态和房地产故事",
   "blog.noBlogsFound": "未找到博客",
   "blog.checkBackLater": "请稍后再来查看。",
-
   "testimonial.clientReviews": "客户评价",
   "testimonial.whatOurClientsSay": "客户怎么说",
-
   "cta.title": "准备好找到您的梦想房产了吗？",
   "cta.description": "让我们的专家引导您在迪拜蓬勃发展的房地产市场中找到完美的投资机会。",
   "cta.scheduleConsultation": "预约咨询",
-
   "footer.grPremium": "GR Premium",
   "footer.propertiesLlc": "Properties LLC",
   "footer.description": "您在迪拜及更广泛地区寻找豪华房产的可信赖伙伴。",
@@ -75,7 +67,6 @@
   "footer.townhouses": "联排别墅",
   "footer.enquireNow": "立即咨询",
   "footer.copyright": "© 2026 GR Premium Properties. 保留所有权利。",
-
   "contact.getInTouch": "联系我们",
   "contact.contactUs": "联系我们",
   "contact.heroDescription": "自信地开始您的房产之旅。",
@@ -87,7 +78,6 @@
   "contact.workingHours": "工作时间",
   "contact.sendUsEnquiry": "发送咨询",
   "contact.consent": "我授权公司代表就其产品和优惠与我联系。",
-
   "form.fullName": "全名",
   "form.enterFullName": "请输入您的全名",
   "form.email": "电子邮件",
@@ -105,9 +95,7 @@
   "form.consent": "我授权公司代表通过电话、短信、电子邮件或WhatsApp与我联系。",
   "form.successMessage": "咨询发送成功 ✅",
   "form.errorMessage": "出了点问题，请重试 ❌",
-
   "enquiryModal.title": "发送您的咨询",
-
   "properties.findDreamProperty": "找到您的梦想房产",
   "properties.heroDescription": "迪拜的豪华住宅和优质投资",
   "properties.noPropertiesFound": "未找到房产",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "最高价格",
   "properties.find": "查找",
   "properties.reset": "重置",
-
   "howItWorks.ourProcess": "我们的流程",
   "howItWorks.title": "运作方式",
   "howItWorks.description": "我们简化的流程使在迪拜购买房产变得简单、透明且无压力。",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "质量检查和缺陷处理",
   "howItWorks.step4Point3": "物业管理服务",
   "howItWorks.step4Point4": "租赁和转售协助",
-
   "aboutPage.whoWeAre": "关于我们",
   "aboutPage.title": "关于 GR Premium Properties",
   "aboutPage.heroDescription": "15年来，我们一直帮助投资者和购房者在迪拜和阿联酋找到他们理想的房产。",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "市场分析师",
   "aboutPage.customerSupport": "客户支持",
   "aboutPage.operationsManager": "运营经理",
-
   "developersPage.ourPartners": "我们的合作伙伴",
   "developersPage.heroTitle": "迪拜顶级房地产开发商",
   "developersPage.heroDescription": "我们与迪拜最值得信赖的开发商合作，为您提供世界级的住宅和商业物业，旨在为您带来奢华生活和高投资回报。",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "我们与迪拜最值得信赖和最有声望的开发商合作，为您提供优质住宅和商业项目。",
   "developersPage.viewProjects": "查看项目 →",
   "developersPage.noImage": "无图片",
-
   "media.title": "媒体",
   "media.subtitle": "图片与视频",
   "media.image": "图片",
   "media.video": "视频",
-
   "developerDetail.ourPartner": "我们的合作伙伴",
   "developerDetail.heroDescription": "塑造迪拜天际线的高端房地产开发商",
   "developerDetail.viewProjects": "查看项目",
@@ -213,7 +196,6 @@
   "developerDetail.about": "关于",
   "developerDetail.projectsBy": "项目来自",
   "developerDetail.noProjectsYet": "暂无项目。",
-
   "brochure.downloadBrochure": "下载手册",
   "brochure.fullName": "全名",
   "brochure.emailAddress": "电子邮件地址",
@@ -231,5 +213,11 @@
   "country.uk": "英国",
   "country.us": "美国",
   "country.saudiArabia": "沙特阿拉伯",
-  "country.other": "其他"
+  "country.other": "其他",
+  "testimonial.review": "条评论",
+  "testimonial.reviews": "条评论",
+  "testimonial.monthsAgo": "个月前",
+  "testimonial.review1": "我与他们的合作体验非常出色。从一开始，团队就很专业、透明且非常支持。他们都非常努力，态度非常积极。",
+  "testimonial.review2": "友好的团队和顺畅的投资服务。非常感谢。",
+  "testimonial.review3": "一个专业且热情的环境，提供优质服务，为客户付出额外努力。"
 }

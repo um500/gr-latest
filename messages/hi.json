@@ -10,11 +10,9 @@
   "nav.media": "मीडिया",
   "nav.enquireNow": "अभी पूछताछ करें",
   "nav.grPremiumProperties": "जीआर प्रीमियम प्रॉपर्टीज",
-
   "hero.search": "खोजें",
   "hero.communityOrBuilding": "समुदाय या भवन",
   "hero.loading": "हीरो सामग्री लोड हो रही है…",
-
   "about.whyGrPremium": "जीआर प्रीमियम क्यों",
   "about.whyChooseGrPremium": "जीआर प्रीमियम क्यों चुनें?",
   "about.description": "दुबई के रियल एस्टेट बाजार में 15 से अधिक वर्षों के अनुभव के साथ, हम आपकी जीवनशैली और निवेश लक्ष्यों से मेल खाने वाली विशेष संपत्तियों तक बेजोड़ सेवा और पहुँच प्रदान करते हैं।",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "बिना छुपी लागत के पारदर्शी मूल्य निर्धारण",
   "about.feature.postPurchase": "खरीद के बाद सहायता और संपत्ति प्रबंधन",
   "about.feature.multilingualTeam": "विश्वभर के ग्राहकों की सेवा करने वाली बहुभाषी टीम",
-
   "property.projects": "प्रोजेक्ट्स",
   "property.featuredProperties": "विशेष संपत्तियाँ",
   "property.description": "प्रीमियम रियल एस्टेट प्रोजेक्ट्स का हमारा चुनिंदा संग्रह खोजें।",
@@ -38,14 +35,12 @@
   "property.enquire": "पूछताछ",
   "property.handover": "हैंडओवर",
   "property.bed": "बेड",
-
   "developer.developers": "डेवलपर्स",
   "developer.trustedDevelopers": "विश्वसनीय डेवलपर्स",
   "developer.description": "हम गुणवत्ता, पारदर्शिता और समय पर डिलीवरी के लिए जाने जाने वाले प्रतिष्ठित डेवलपर्स के साथ साझेदारी करते हैं।",
   "developer.viewProjects": "प्रोजेक्ट देखें",
   "developer.viewAllDevelopers": "सभी डेवलपर्स देखें →",
   "developer.defaultDescription": "इस विश्वसनीय रियल एस्टेट डेवलपर के प्रीमियम प्रोजेक्ट खोजें, जो गुणवत्ता निर्माण और समय पर डिलीवरी के लिए जाने जाते हैं।",
-
   "blog.blogs": "ब्लॉग",
   "blog.latestBlogs": "नवीनतम ब्लॉग",
   "blog.description": "अंतर्दृष्टि, समाचार और रियल एस्टेट अपडेट",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "नवीनतम अंतर्दृष्टि, अपडेट और रियल एस्टेट कहानियाँ",
   "blog.noBlogsFound": "कोई ब्लॉग नहीं मिला",
   "blog.checkBackLater": "कृपया बाद में पुनः देखें।",
-
   "testimonial.clientReviews": "ग्राहक समीक्षाएँ",
   "testimonial.whatOurClientsSay": "हमारे ग्राहक क्या कहते हैं",
-
   "cta.title": "अपनी सपनों की संपत्ति खोजने के लिए तैयार हैं?",
   "cta.description": "हमारे विशेषज्ञों को दुबई के समृद्ध रियल एस्टेट बाजार में सही निवेश अवसर खोजने में आपका मार्गदर्शन करने दें।",
   "cta.scheduleConsultation": "परामर्श शेड्यूल करें",
-
   "footer.grPremium": "जीआर प्रीमियम",
   "footer.propertiesLlc": "प्रॉपर्टीज एलएलसी",
   "footer.description": "दुबई और उसके बाहर लक्जरी संपत्तियों को खोजने में आपका विश्वसनीय साथी।",
@@ -75,7 +67,6 @@
   "footer.townhouses": "टाउनहाउस",
   "footer.enquireNow": "अभी पूछताछ करें",
   "footer.copyright": "© 2026 जीआर प्रीमियम प्रॉपर्टीज। सर्वाधिकार सुरक्षित।",
-
   "contact.getInTouch": "संपर्क करें",
   "contact.contactUs": "हमसे संपर्क करें",
   "contact.heroDescription": "विश्वास के साथ अपनी संपत्ति यात्रा शुरू करें।",
@@ -87,7 +78,6 @@
   "contact.workingHours": "कार्य समय",
   "contact.sendUsEnquiry": "हमें पूछताछ भेजें",
   "contact.consent": "मैं कंपनी के प्रतिनिधियों को अपने उत्पादों और ऑफ़र के बारे में संपर्क करने के लिए अधिकृत करता/करती हूँ।",
-
   "form.fullName": "पूरा नाम",
   "form.enterFullName": "अपना पूरा नाम दर्ज करें",
   "form.email": "ईमेल",
@@ -105,9 +95,7 @@
   "form.consent": "मैं कंपनी के प्रतिनिधियों को कॉल, एसएमएस, ईमेल या व्हाट्सएप करने के लिए अधिकृत करता/करती हूँ।",
   "form.successMessage": "पूछताछ सफलतापूर्वक भेजी गई ✅",
   "form.errorMessage": "कुछ गलत हो गया। कृपया पुनः प्रयास करें ❌",
-
   "enquiryModal.title": "अपनी पूछताछ भेजें",
-
   "properties.findDreamProperty": "अपनी सपनों की संपत्ति खोजें",
   "properties.heroDescription": "दुबई में लक्जरी घर और प्रीमियम निवेश",
   "properties.noPropertiesFound": "कोई संपत्ति नहीं मिली",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "अधिकतम मूल्य",
   "properties.find": "खोजें",
   "properties.reset": "रीसेट",
-
   "howItWorks.ourProcess": "हमारी प्रक्रिया",
   "howItWorks.title": "यह कैसे काम करता है",
   "howItWorks.description": "हमारी सुव्यवस्थित प्रक्रिया दुबई में संपत्ति खरीदना सरल, पारदर्शी और तनाव-मुक्त बनाती है।",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "स्नैगिंग और दोष समाधान",
   "howItWorks.step4Point3": "संपत्ति प्रबंधन सेवाएँ",
   "howItWorks.step4Point4": "किराया और पुनर्विक्रय सहायता",
-
   "aboutPage.whoWeAre": "हम कौन हैं",
   "aboutPage.title": "जीआर प्रीमियम प्रॉपर्टीज के बारे में",
   "aboutPage.heroDescription": "15 से अधिक वर्षों से, हम निवेशकों और घर खरीदारों को दुबई और यूएई में उनकी सही संपत्ति खोजने में मदद कर रहे हैं।",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "बाजार विश्लेषक",
   "aboutPage.customerSupport": "ग्राहक सहायता",
   "aboutPage.operationsManager": "संचालन प्रबंधक",
-
   "developersPage.ourPartners": "हमारे साझेदार",
   "developersPage.heroTitle": "दुबई में शीर्ष रियल एस्टेट डेवलपर्स",
   "developersPage.heroDescription": "हम दुबई के सबसे विश्वसनीय डेवलपर्स के साथ सहयोग करते हैं ताकि आपको विश्व स्तरीय आवासीय और वाणिज्यिक संपत्तियाँ प्रदान कर सकें।",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "हम दुबई के सबसे विश्वसनीय और प्रतिष्ठित डेवलपर्स के साथ काम करते हैं।",
   "developersPage.viewProjects": "प्रोजेक्ट देखें →",
   "developersPage.noImage": "कोई छवि नहीं",
-
   "media.title": "मीडिया",
   "media.subtitle": "चित्र और वीडियो",
   "media.image": "चित्र",
   "media.video": "वीडियो",
-
   "developerDetail.ourPartner": "हमारे साझेदार",
   "developerDetail.heroDescription": "दुबई के क्षितिज को आकार देने वाला प्रीमियम रियल एस्टेट डेवलपर",
   "developerDetail.viewProjects": "प्रोजेक्ट देखें",
@@ -213,7 +196,6 @@
   "developerDetail.about": "के बारे में",
   "developerDetail.projectsBy": "द्वारा प्रोजेक्ट",
   "developerDetail.noProjectsYet": "अभी तक कोई प्रोजेक्ट नहीं जोड़ा गया।",
-
   "brochure.downloadBrochure": "ब्रोशर डाउनलोड करें",
   "brochure.fullName": "पूरा नाम",
   "brochure.emailAddress": "ईमेल पता",
@@ -231,5 +213,11 @@
   "country.uk": "यूनाइटेड किंगडम",
   "country.us": "संयुक्त राज्य अमेरिका",
   "country.saudiArabia": "सऊदी अरब",
-  "country.other": "अन्य"
+  "country.other": "अन्य",
+  "testimonial.review": "समीक्षा",
+  "testimonial.reviews": "समीक्षाएं",
+  "testimonial.monthsAgo": "महीने पहले",
+  "testimonial.review1": "मुझे उनके साथ वाकई एक उत्कृष्ट अनुभव हुआ। शुरू से ही, टीम पेशेवर, पारदर्शी और अत्यंत सहायक थी। वे सभी बहुत मेहनती हैं और बहुत सकारात्मक दृष्टिकोण के साथ काम करते हैं।",
+  "testimonial.review2": "सौहार्दपूर्ण लोग और सहज निवेश सेवाएं। इसकी सराहना करता हूं।",
+  "testimonial.review3": "एक पेशेवर और स्वागत करने वाला माहौल उत्कृष्ट सेवा प्रदान करता है और ग्राहकों के लिए अतिरिक्त प्रयास करता है।"
 }

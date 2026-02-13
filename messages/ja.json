@@ -10,11 +10,9 @@
   "nav.media": "メディア",
   "nav.enquireNow": "今すぐお問い合わせ",
   "nav.grPremiumProperties": "GR Premium Properties",
-
   "hero.search": "検索",
   "hero.communityOrBuilding": "コミュニティまたは建物",
   "hero.loading": "メインコンテンツを読み込み中…",
-
   "about.whyGrPremium": "GR Premiumを選ぶ理由",
   "about.whyChooseGrPremium": "なぜGR Premiumを選ぶのか？",
   "about.description": "ドバイの不動産市場で15年以上の経験を持つ私たちは、お客様のライフスタイルと投資目標に合った独占的な物件への比類なきサービスとアクセスを提供します。",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "隠れたコストのない透明な価格設定",
   "about.feature.postPurchase": "購入後のサポートと物件管理",
   "about.feature.multilingualTeam": "世界中のお客様にサービスを提供する多言語チーム",
-
   "property.projects": "プロジェクト",
   "property.featuredProperties": "注目の物件",
   "property.description": "厳選されたプレミアム不動産プロジェクトをご覧ください。",
@@ -38,14 +35,12 @@
   "property.enquire": "お問い合わせ",
   "property.handover": "引き渡し",
   "property.bed": "ベッド",
-
   "developer.developers": "デベロッパー",
   "developer.trustedDevelopers": "信頼のデベロッパー",
   "developer.description": "品質、透明性、期限内の引き渡しで知られる著名なデベロッパーと提携しています。",
   "developer.viewProjects": "プロジェクトを見る",
   "developer.viewAllDevelopers": "すべてのデベロッパーを見る →",
   "developer.defaultDescription": "高品質な建設と期限内の引き渡しで知られるこの信頼の不動産デベロッパーのプレミアムプロジェクトをご覧ください。",
-
   "blog.blogs": "ブログ",
   "blog.latestBlogs": "最新ブログ",
   "blog.description": "洞察、ニュース、不動産の最新情報",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "最新の洞察、更新情報、不動産ストーリー",
   "blog.noBlogsFound": "ブログが見つかりません",
   "blog.checkBackLater": "後ほどもう一度ご確認ください。",
-
   "testimonial.clientReviews": "お客様の声",
   "testimonial.whatOurClientsSay": "お客様からの評価",
-
   "cta.title": "夢の物件を見つける準備はできましたか？",
   "cta.description": "ドバイの活気ある不動産市場で最適な投資機会を見つけるお手伝いをいたします。",
   "cta.scheduleConsultation": "相談を予約する",
-
   "footer.grPremium": "GR Premium",
   "footer.propertiesLlc": "Properties LLC",
   "footer.description": "ドバイおよびその他の地域で高級物件を見つけるための信頼できるパートナー。",
@@ -75,7 +67,6 @@
   "footer.townhouses": "タウンハウス",
   "footer.enquireNow": "今すぐお問い合わせ",
   "footer.copyright": "© 2026 GR Premium Properties. All rights reserved.",
-
   "contact.getInTouch": "お問い合わせ",
   "contact.contactUs": "お問い合わせ",
   "contact.heroDescription": "自信を持って不動産の旅を始めましょう。",
@@ -87,7 +78,6 @@
   "contact.workingHours": "営業時間",
   "contact.sendUsEnquiry": "お問い合わせを送信",
   "contact.consent": "当社の製品およびオファーについて、会社の担当者が連絡することを承認します。",
-
   "form.fullName": "氏名",
   "form.enterFullName": "氏名を入力してください",
   "form.email": "メール",
@@ -105,9 +95,7 @@
   "form.consent": "当社の担当者が電話、SMS、メール、またはWhatsAppで連絡することを承認します。",
   "form.successMessage": "お問い合わせが正常に送信されました ✅",
   "form.errorMessage": "エラーが発生しました。もう一度お試しください ❌",
-
   "enquiryModal.title": "お問い合わせを送信",
-
   "properties.findDreamProperty": "夢の物件を見つけましょう",
   "properties.heroDescription": "ドバイの高級住宅とプレミアム投資",
   "properties.noPropertiesFound": "物件が見つかりません",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "最高価格",
   "properties.find": "検索",
   "properties.reset": "リセット",
-
   "howItWorks.ourProcess": "私たちのプロセス",
   "howItWorks.title": "ご利用の流れ",
   "howItWorks.description": "私たちの効率化されたプロセスにより、ドバイでの不動産購入がシンプル、透明、ストレスフリーになります。",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "不具合の確認と解決",
   "howItWorks.step4Point3": "物件管理サービス",
   "howItWorks.step4Point4": "賃貸および再販の支援",
-
   "aboutPage.whoWeAre": "私たちについて",
   "aboutPage.title": "GR Premium Propertiesについて",
   "aboutPage.heroDescription": "15年以上にわたり、投資家と住宅購入者がドバイとUAEで理想の物件を見つけるお手伝いをしてきました。",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "市場アナリスト",
   "aboutPage.customerSupport": "カスタマーサポート",
   "aboutPage.operationsManager": "オペレーションマネージャー",
-
   "developersPage.ourPartners": "パートナー",
   "developersPage.heroTitle": "ドバイのトップ不動産デベロッパー",
   "developersPage.heroDescription": "ドバイで最も信頼されるデベロッパーと協力し、贅沢な暮らしと高い投資リターンのために設計されたワールドクラスの住宅・商業物件をご提供します。",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "ドバイで最も信頼され著名なデベロッパーと協力し、プレミアムな住宅・商業プロジェクトをご提供しています。",
   "developersPage.viewProjects": "プロジェクトを見る →",
   "developersPage.noImage": "画像なし",
-
   "media.title": "メディア",
   "media.subtitle": "画像と動画",
   "media.image": "画像",
   "media.video": "動画",
-
   "developerDetail.ourPartner": "パートナー",
   "developerDetail.heroDescription": "ドバイのスカイラインを形作るプレミアム不動産開発会社",
   "developerDetail.viewProjects": "プロジェクトを見る",
@@ -213,7 +196,6 @@
   "developerDetail.about": "について",
   "developerDetail.projectsBy": "のプロジェクト",
   "developerDetail.noProjectsYet": "プロジェクトはまだ追加されていません。",
-
   "brochure.downloadBrochure": "パンフレットをダウンロード",
   "brochure.fullName": "氏名",
   "brochure.emailAddress": "メールアドレス",
@@ -231,5 +213,11 @@
   "country.uk": "イギリス",
   "country.us": "アメリカ",
   "country.saudiArabia": "サウジアラビア",
-  "country.other": "その他"
+  "country.other": "その他",
+  "testimonial.review": "件のレビュー",
+  "testimonial.reviews": "件のレビュー",
+  "testimonial.monthsAgo": "ヶ月前",
+  "testimonial.review1": "本当に素晴らしい経験でした。最初から、チームはプロフェッショナルで透明性があり、非常にサポートしてくれました。全員がとても勤勉で、非常に前向きな姿勢で仕事をしています。",
+  "testimonial.review2": "親切な人々とスムーズな投資サービス。感謝しています。",
+  "testimonial.review3": "プロフェッショナルで温かい環境が優れたサービスを提供し、クライアントのために特別な努力をしています。"
 }

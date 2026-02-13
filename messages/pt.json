@@ -10,11 +10,9 @@
   "nav.media": "Mídia",
   "nav.enquireNow": "Consultar Agora",
   "nav.grPremiumProperties": "GR Premium Properties",
-
   "hero.search": "Buscar",
   "hero.communityOrBuilding": "Comunidade ou Edifício",
   "hero.loading": "Carregando conteúdo principal…",
-
   "about.whyGrPremium": "Por Que GR Premium",
   "about.whyChooseGrPremium": "Por Que Escolher a GR Premium?",
   "about.description": "Com mais de 15 anos de experiência no mercado imobiliário de Dubai, oferecemos um serviço incomparável e acesso a propriedades exclusivas que correspondem ao seu estilo de vida e objetivos de investimento.",
@@ -29,7 +27,6 @@
   "about.feature.transparentPricing": "Preços transparentes sem custos ocultos",
   "about.feature.postPurchase": "Suporte pós-compra e gestão de propriedades",
   "about.feature.multilingualTeam": "Equipe multilíngue atendendo clientes em todo o mundo",
-
   "property.projects": "Projetos",
   "property.featuredProperties": "Imóveis em Destaque",
   "property.description": "Descubra nossa seleção exclusiva de projetos imobiliários premium.",
@@ -38,14 +35,12 @@
   "property.enquire": "Consultar",
   "property.handover": "Entrega",
   "property.bed": "Quarto",
-
   "developer.developers": "Incorporadoras",
   "developer.trustedDevelopers": "Incorporadoras de Confiança",
   "developer.description": "Trabalhamos com incorporadoras renomadas conhecidas pela qualidade, transparência e entrega pontual.",
   "developer.viewProjects": "Ver Projetos",
   "developer.viewAllDevelopers": "Ver Todas as Incorporadoras →",
   "developer.defaultDescription": "Explore projetos premium desta incorporadora confiável, conhecida pela qualidade de construção e entrega pontual.",
-
   "blog.blogs": "Blogs",
   "blog.latestBlogs": "Últimos Blogs",
   "blog.description": "Insights, notícias e atualizações imobiliárias",
@@ -55,14 +50,11 @@
   "blog.blogDescription": "Últimos insights, atualizações e histórias imobiliárias",
   "blog.noBlogsFound": "Nenhum blog encontrado",
   "blog.checkBackLater": "Por favor, volte mais tarde.",
-
   "testimonial.clientReviews": "Avaliações de Clientes",
   "testimonial.whatOurClientsSay": "O Que Nossos Clientes Dizem",
-
   "cta.title": "Pronto para Encontrar o Imóvel dos Seus Sonhos?",
   "cta.description": "Deixe nossos especialistas guiá-lo até a oportunidade de investimento perfeita no próspero mercado imobiliário de Dubai.",
   "cta.scheduleConsultation": "Agendar uma Consulta",
-
   "footer.grPremium": "GR Premium",
   "footer.propertiesLlc": "Properties LLC",
   "footer.description": "Seu parceiro de confiança para encontrar imóveis de luxo em Dubai e além.",
@@ -75,7 +67,6 @@
   "footer.townhouses": "Casas Geminadas",
   "footer.enquireNow": "Consultar Agora",
   "footer.copyright": "© 2026 GR Premium Properties. Todos os direitos reservados.",
-
   "contact.getInTouch": "ENTRE EM CONTATO",
   "contact.contactUs": "Fale Conosco",
   "contact.heroDescription": "Comece sua jornada imobiliária com confiança.",
@@ -87,7 +78,6 @@
   "contact.workingHours": "Horário de Funcionamento",
   "contact.sendUsEnquiry": "Envie-nos uma Consulta",
   "contact.consent": "Autorizo os representantes da empresa a me contatar sobre seus produtos e ofertas.",
-
   "form.fullName": "Nome Completo",
   "form.enterFullName": "Digite seu nome completo",
   "form.email": "E-mail",
@@ -105,9 +95,7 @@
   "form.consent": "Autorizo os representantes da empresa a me ligar, enviar SMS, e-mail ou WhatsApp.",
   "form.successMessage": "Consulta enviada com sucesso ✅",
   "form.errorMessage": "Algo deu errado. Por favor, tente novamente ❌",
-
   "enquiryModal.title": "Envie Sua Consulta",
-
   "properties.findDreamProperty": "Encontre o Imóvel dos Seus Sonhos",
   "properties.heroDescription": "Casas de luxo e investimentos premium em Dubai",
   "properties.noPropertiesFound": "Nenhum imóvel encontrado",
@@ -127,7 +115,6 @@
   "properties.maxPrice": "Preço Máximo",
   "properties.find": "Buscar",
   "properties.reset": "Redefinir",
-
   "howItWorks.ourProcess": "NOSSO PROCESSO",
   "howItWorks.title": "Como Funciona",
   "howItWorks.description": "Nosso processo simplificado torna a compra de imóveis em Dubai simples, transparente e sem estresse.",
@@ -155,7 +142,6 @@
   "howItWorks.step4Point2": "Resolução de defeitos e acabamentos",
   "howItWorks.step4Point3": "Serviços de gestão imobiliária",
   "howItWorks.step4Point4": "Assistência em locação e revenda",
-
   "aboutPage.whoWeAre": "QUEM SOMOS",
   "aboutPage.title": "Sobre a GR Premium Properties",
   "aboutPage.heroDescription": "Há mais de 15 anos, ajudamos investidores e compradores a encontrar o imóvel perfeito em Dubai e nos EAU.",
@@ -188,7 +174,6 @@
   "aboutPage.marketAnalyst": "Analista de Mercado",
   "aboutPage.customerSupport": "Suporte ao Cliente",
   "aboutPage.operationsManager": "Gerente de Operações",
-
   "developersPage.ourPartners": "Nossos Parceiros",
   "developersPage.heroTitle": "Principais Incorporadoras em Dubai",
   "developersPage.heroDescription": "Colaboramos com as incorporadoras mais confiáveis de Dubai para oferecer imóveis residenciais e comerciais de classe mundial projetados para uma vida de luxo e altos retornos de investimento.",
@@ -197,12 +182,10 @@
   "developersPage.sectionDescription": "Trabalhamos com as incorporadoras mais confiáveis e renomadas de Dubai para oferecer projetos residenciais e comerciais premium.",
   "developersPage.viewProjects": "Ver Projetos →",
   "developersPage.noImage": "Sem Imagem",
-
   "media.title": "Mídia",
   "media.subtitle": "Imagens e Vídeos",
   "media.image": "Imagem",
   "media.video": "Vídeo",
-
   "developerDetail.ourPartner": "Nosso Parceiro",
   "developerDetail.heroDescription": "Desenvolvedor imobiliário premium moldando o horizonte de Dubai",
   "developerDetail.viewProjects": "Ver Projetos",
@@ -213,7 +196,6 @@
   "developerDetail.about": "Sobre",
   "developerDetail.projectsBy": "Projetos de",
   "developerDetail.noProjectsYet": "Nenhum projeto adicionado ainda.",
-
   "brochure.downloadBrochure": "Baixar Folheto",
   "brochure.fullName": "Nome Completo",
   "brochure.emailAddress": "Endereço de E-mail",
@@ -231,5 +213,11 @@
   "country.uk": "Reino Unido",
   "country.us": "Estados Unidos",
   "country.saudiArabia": "Arábia Saudita",
-  "country.other": "Outro"
+  "country.other": "Outro",
+  "testimonial.review": "avaliação",
+  "testimonial.reviews": "avaliações",
+  "testimonial.monthsAgo": "meses atrás",
+  "testimonial.review1": "Tive uma experiência verdadeiramente excelente com eles. Desde o início, a equipe foi profissional, transparente e extremamente solidária. Todos são muito trabalhadores e têm uma atitude muito positiva.",
+  "testimonial.review2": "Pessoas cordiais e serviços de investimento perfeitos. Agradeço.",
+  "testimonial.review3": "Um ambiente profissional e acolhedor que oferece excelente serviço e faz um esforço extra pelos clientes."
 }
