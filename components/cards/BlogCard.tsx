@@ -12,6 +12,7 @@ interface BlogCardProps {
     excerpt: string;
     slug: string;
     mainImage?: any;
+    [key: string]: any;
   };
 }
 
@@ -19,7 +20,14 @@ const PLACEHOLDER = "/images/placeholder.jpg";
 const goldenColor = "#C9A227";
 
 export default function BlogCard({ blog }: BlogCardProps) {
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
+
+  const getLocalized = (item: any, field: string) => {
+    if (lang === "en") return item[field];
+    return item[`${field}_${lang}`] || item[field];
+  };
+
+  const slug = typeof blog.slug === 'object' ? (blog.slug as any)?.current : blog.slug;
 
   const imageUrl = blog?.mainImage
     ? urlFor(blog.mainImage).width(800).height(600).url()
@@ -38,35 +46,32 @@ export default function BlogCard({ blog }: BlogCardProps) {
         flex flex-col
       "
     >
-      {/* ================= IMAGE ================= */}
       <div className="relative w-full aspect-[4/3] overflow-hidden">
         <Image
           src={imageUrl}
-          alt={blog.title}
+          alt={getLocalized(blog, "title")}
           fill
           className="object-cover transition-transform duration-500 hover:scale-105"
         />
       </div>
 
-      {/* ================= CONTENT ================= */}
       <div className="p-6 flex flex-col flex-grow">
         <h3 className="text-lg font-semibold leading-snug mb-2 line-clamp-2">
-          {blog.title}
+          {getLocalized(blog, "title")}
         </h3>
 
-        {blog.subtitle && (
+        {getLocalized(blog, "subtitle") && (
           <p className="text-sm text-gray-500 dark:text-gray-400 mb-3 line-clamp-1">
-            {blog.subtitle}
+            {getLocalized(blog, "subtitle")}
           </p>
         )}
 
         <p className="text-gray-600 dark:text-gray-300 text-sm line-clamp-3 mb-6">
-          {blog.excerpt}
+          {getLocalized(blog, "excerpt")}
         </p>
 
-        {/* ================= BUTTON ================= */}
         <Link
-          href={`/blog/${blog.slug}`}
+          href={`/blog/${slug}`}
           className="
             mt-auto
             inline-flex items-center justify-center

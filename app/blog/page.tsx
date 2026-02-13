@@ -54,13 +54,7 @@ export default async function BlogPage() {
               {blogs.map((blog: any) => (
                 <BlogCard
                   key={blog._id}
-                  blog={{
-                    title: blog.title,
-                    subtitle: blog.subtitle,
-                    excerpt: blog.excerpt,
-                    slug: blog.slug?.current || blog.slug,
-                    mainImage: blog.mainImage,
-                  }}
+                  blog={blog}
                 />
               ))}
             </div>

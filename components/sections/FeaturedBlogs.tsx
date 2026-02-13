@@ -32,13 +32,7 @@ export default async function FeaturedBlogs() {
             {blogs.map((blog: any) => (
               <div key={blog._id} className="w-full">
                 <BlogCard
-                  blog={{
-                    title: blog.title,
-                    subtitle: blog.subtitle,
-                    excerpt: blog.excerpt,
-                    slug: blog.slug,
-                    mainImage: blog.mainImage,
-                  }}
+                  blog={blog}
                 />
               </div>
             ))}

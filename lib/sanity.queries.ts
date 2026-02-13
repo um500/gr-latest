@@ -250,8 +250,11 @@ export const allBlogsQuery = groq`
 *[_type == "blog"]{
   _id,
   title,
+  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
   subtitle,
+  subtitle_hi, subtitle_es, subtitle_fr, subtitle_de, subtitle_zh, subtitle_ar, subtitle_pt, subtitle_ru, subtitle_ja,
   excerpt,
+  excerpt_hi, excerpt_es, excerpt_fr, excerpt_de, excerpt_zh, excerpt_ar, excerpt_pt, excerpt_ru, excerpt_ja,
   "slug": slug.current,
   mainImage{
     asset->{ url }
@@ -263,8 +266,11 @@ export const getSingleBlogQuery = groq`
 *[_type == "blog" && slug.current == $slug][0]{
   _id,
   title,
+  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
   subtitle,
+  subtitle_hi, subtitle_es, subtitle_fr, subtitle_de, subtitle_zh, subtitle_ar, subtitle_pt, subtitle_ru, subtitle_ja,
   content,
+  content_hi, content_es, content_fr, content_de, content_zh, content_ar, content_pt, content_ru, content_ja,
   mainImage{
     asset->{ url }
   }
