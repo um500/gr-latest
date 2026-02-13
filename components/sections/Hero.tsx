@@ -3,6 +3,7 @@
 import { useEffect, useState, useRef } from "react";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "@/lib/language-context";
 
 /* ================= TYPES ================= */
 
@@ -54,6 +55,7 @@ export default function Hero({
 }: HeroProps) {
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   /* ================= SAFE SLIDES ================= */
 
@@ -67,7 +69,7 @@ export default function Hero({
     return (
       <section className="h-[80vh] flex items-center justify-center bg-gray-100 dark:bg-[#0F172A] transition-colors duration-300">
         <p className="text-gray-500 dark:text-gray-400 text-lg">
-          Hero content loading…
+          {t("hero.loading")}
         </p>
       </section>
     );
@@ -225,7 +227,7 @@ export default function Hero({
                   setShowSuggestions(true);
                 }}
                 onFocus={() => setShowSuggestions(true)}
-                placeholder="Community or Building"
+                placeholder={t("hero.communityOrBuilding")}
                 className="flex-1 px-4 py-3 bg-transparent outline-none text-sm"
               />
 
@@ -234,7 +236,7 @@ export default function Hero({
                 className="px-6 py-3 text-white text-sm font-medium transition"
                 style={{ backgroundColor: goldenColor }}
               >
-                Search
+                {t("hero.search")}
               </button>
             </div>
 

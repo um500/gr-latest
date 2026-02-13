@@ -2,11 +2,13 @@
 
 import { useState, useEffect } from "react";
 import EnquiryModal from "@/components/ui/EnquiryModal";
+import { useTranslation } from "@/lib/language-context";
 
 const goldenColor = "#D4A843";
 
 export default function CtaSection() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   /* ===== Scroll Lock Fix ===== */
   useEffect(() => {
@@ -41,15 +43,14 @@ export default function CtaSection() {
             className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6"
             style={{ fontFamily: "'Playfair Display', serif" }}
           >
-            Ready to Find Your Dream Property?
+            {t("cta.title")}
           </h2>
 
           <p
             className="text-base md:text-lg mb-10 max-w-2xl mx-auto text-white/80 leading-relaxed"
             style={{ fontFamily: "'DM Sans', sans-serif" }}
           >
-            Let our experts guide you to the perfect investment opportunity in
-            Dubai&apos;s thriving real estate market.
+            {t("cta.description")}
           </p>
 
           {/* CTA BUTTON */}
@@ -62,7 +63,7 @@ export default function CtaSection() {
               fontFamily: "'DM Sans', sans-serif",
             }}
           >
-            Schedule a Consultation
+            {t("cta.scheduleConsultation")}
           </button>
         </div>
       </section>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { motion, type Variants } from "framer-motion";
 import Link from "next/link";
+import { useTranslation } from "@/lib/language-context";
 
 /* ================= TYPES ================= */
 
@@ -40,6 +41,8 @@ export default function DeveloperSection({
 }: {
   developers: Developer[];
 }) {
+  const { t } = useTranslation();
+
   if (!developers?.length) return null;
 
   return (
@@ -49,16 +52,15 @@ export default function DeveloperSection({
         {/* HEADING */}
         <div className="text-center mb-14">
           <span className="text-[#C9A227] text-sm font-semibold tracking-[0.2em] uppercase">
-            Developers
+            {t("developer.developers")}
           </span>
 
           <h2 className="text-4xl font-serif text-gray-900 dark:text-white mt-3">
-            Trusted Developers
+            {t("developer.trustedDevelopers")}
           </h2>
 
           <p className="mt-4 text-gray-600 dark:text-gray-400 max-w-xl mx-auto">
-            We partner with reputed developers known for quality,
-            transparency, and timely delivery.
+            {t("developer.description")}
           </p>
         </div>
 
@@ -108,7 +110,7 @@ export default function DeveloperSection({
 
                   <p className="text-sm text-gray-600 dark:text-gray-400 mt-3 line-clamp-3 flex-1">
                     {dev.shortDescription ||
-                      "Explore premium projects by this trusted real estate developer, known for quality construction and timely delivery."}
+                      t("developer.defaultDescription")}
                   </p>
 
                   <Link
@@ -126,7 +128,7 @@ export default function DeveloperSection({
                       transition
                     "
                   >
-                    View Projects
+                    {t("developer.viewProjects")}
                   </Link>
                 </div>
               </motion.div>
@@ -154,7 +156,7 @@ export default function DeveloperSection({
               duration-300
             "
           >
-            View All Developers →
+            {t("developer.viewAllDevelopers")}
           </Link>
         </div>
 

@@ -2,6 +2,7 @@
 
 import { X } from "lucide-react";
 import EnquiryForm from "@/components/forms/EnquiryForm";
+import { useTranslation } from "@/lib/language-context";
 
 export default function EnquiryModal({
   open,
@@ -12,6 +13,8 @@ export default function EnquiryModal({
   onClose: () => void;
   propertyName?: string;
 }) {
+  const { t } = useTranslation();
+
   if (!open) return null;
 
   return (
@@ -42,7 +45,7 @@ export default function EnquiryModal({
 
             {/* TITLE */}
             <h2 className="text-xl font-semibold mb-6 text-center">
-              Send Your Enquiry
+              {t("enquiryModal.title")}
             </h2>
 
             {/* FORM */}

@@ -1,6 +1,9 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import { urlFor } from "@/lib/sanity.image";
+import { useTranslation } from "@/lib/language-context";
 
 interface BlogCardProps {
   blog: {
@@ -16,6 +19,8 @@ const PLACEHOLDER = "/images/placeholder.jpg";
 const goldenColor = "#C9A227";
 
 export default function BlogCard({ blog }: BlogCardProps) {
+  const { t } = useTranslation();
+
   const imageUrl = blog?.mainImage
     ? urlFor(blog.mainImage).width(800).height(600).url()
     : PLACEHOLDER;
@@ -74,7 +79,7 @@ export default function BlogCard({ blog }: BlogCardProps) {
           "
           style={{ backgroundColor: goldenColor }}
         >
-          Read More
+          {t("blog.readMore")}
         </Link>
       </div>
     </article>

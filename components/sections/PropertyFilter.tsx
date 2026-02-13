@@ -2,6 +2,7 @@
 
 import { useState, useRef, useEffect } from "react";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "@/lib/language-context";
 
 interface Props {
   communities: any[];
@@ -10,6 +11,7 @@ interface Props {
 export default function PropertyFilter({ communities }: Props) {
   const router = useRouter();
   const containerRef = useRef<HTMLDivElement>(null);
+  const { t } = useTranslation();
 
   const [query, setQuery] = useState("");
   const [communitySlug, setCommunitySlug] = useState("");
@@ -70,6 +72,59 @@ export default function PropertyFilter({ communities }: Props) {
     router.push("/properties");
   };
 
+  const filterConfig = [
+    {
+      value: purpose,
+      setter: setPurpose,
+      label: t("properties.buyRent"),
+      options: [
+        { label: t("properties.buy"), value: "buy" },
+        { label: t("properties.rent"), value: "rent" },
+      ],
+    },
+    {
+      value: bedroom,
+      setter: setBedroom,
+      label: t("properties.bedrooms"),
+      options: [
+        { label: t("properties.studio"), value: "studio" },
+        { label: "1 " + t("property.bed"), value: "1" },
+        { label: "2 " + t("property.bed"), value: "2" },
+        { label: "3 " + t("property.bed"), value: "3" },
+        { label: "4+ " + t("property.bed"), value: "4" },
+      ],
+    },
+    {
+      value: type,
+      setter: setType,
+      label: t("properties.propertyType"),
+      options: [
+        { label: t("properties.apartment"), value: "apartment" },
+        { label: t("properties.villa"), value: "villa" },
+        { label: t("properties.penthouse"), value: "penthouse" },
+        { label: t("properties.townhouse"), value: "townhouse" },
+      ],
+    },
+    {
+      value: minPrice,
+      setter: setMinPrice,
+      label: t("properties.minPrice"),
+      options: [
+        { label: "AED 500K", value: "500000" },
+        { label: "AED 1M", value: "1000000" },
+      ],
+    },
+    {
+      value: maxPrice,
+      setter: setMaxPrice,
+      label: t("properties.maxPrice"),
+      options: [
+        { label: "AED 5M", value: "5000000" },
+        { label: "AED 10M", value: "10000000" },
+      ],
+    },
+  ];
+
   return (
     <section className="sticky top-[80px] z-50 w-full bg-white dark:bg-[#0F172A] border-b border-gray-200 dark:border-gray-800 shadow-lg transition-colors duration-300">
       <div className="w-full px-6 py-5">
@@ -88,7 +143,7 @@ export default function PropertyFilter({ communities }: Props) {
                 setSearchOpen(true);
               }}
               onFocus={() => setSearchOpen(true)}
-              placeholder="Community or Area"
+              placeholder={t("properties.communityOrArea")}
               className="w-full border border-gray-300 dark:border-gray-700 
                          bg-white dark:bg-[#111827] 
                          text-black dark:text-white
@@ -132,58 +187,7 @@ export default function PropertyFilter({ communities }: Props) {
           </div>
 
           {/* ================= SELECTS ================= */}
-          {[
-            {
-              value: purpose,
-              setter: setPurpose,
-              label: "Buy / Rent",
-              options: [
-                { label: "Buy", value: "buy" },
-                { label: "Rent", value: "rent" },
-              ],
-            },
-            {
-              value: bedroom,
-              setter: setBedroom,
-              label: "Bedrooms",
-              options: [
-                { label: "Studio", value: "studio" },
-                { label: "1 Bed", value: "1" },
-                { label: "2 Bed", value: "2" },
-                { label: "3 Bed", value: "3" },
-                { label: "4+ Bed", value: "4" },
-              ],
-            },
-            {
-              value: type,
-              setter: setType,
-              label: "Property Type",
-              options: [
-                { label: "Apartment", value: "apartment" },
-                { label: "Villa", value: "villa" },
-                { label: "Penthouse", value: "penthouse" },
-                { label: "Townhouse", value: "townhouse" },
-              ],
-            },
-            {
-              value: minPrice,
-              setter: setMinPrice,
-              label: "Min Price",
-              options: [
-                { label: "AED 500K", value: "500000" },
-                { label: "AED 1M", value: "1000000" },
-              ],
-            },
-            {
-              value: maxPrice,
-              setter: setMaxPrice,
-              label: "Max Price",
-              options: [
-                { label: "AED 5M", value: "5000000" },
-                { label: "AED 10M", value: "10000000" },
-              ],
-            },
-          ].map((item, idx) => (
+          {filterConfig.map((item, idx) => (
             <select
               key={idx}
               value={item.value}
@@ -211,7 +215,7 @@ export default function PropertyFilter({ communities }: Props) {
                        text-white px-7 py-3 rounded-full
                        transition font-medium"
           >
-            Find
+            {t("properties.find")}
           </button>
 
           <button
@@ -222,7 +226,7 @@ export default function PropertyFilter({ communities }: Props) {
                        px-7 py-3 rounded-full
                        transition font-medium"
           >
-            Reset
+            {t("properties.reset")}
           </button>
 
         </div>

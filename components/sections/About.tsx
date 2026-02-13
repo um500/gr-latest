@@ -3,23 +3,9 @@
 import { Building2, Users, Award, ShieldCheck } from "lucide-react";
 import { motion, Variants } from "framer-motion";
 import { useRouter } from "next/navigation";
+import { useTranslation } from "@/lib/language-context";
 
 const goldenColor = "#C9A227";
-
-const stats = [
-  { icon: Building2, value: "500+", label: "PROPERTIES" },
-  { icon: Users, value: "2000+", label: "HAPPY CLIENTS" },
-  { icon: Award, value: "15+", label: "YEARS EXPERIENCE" },
-  { icon: ShieldCheck, value: "100%", label: "TRUSTED SERVICE" },
-];
-
-const features = [
-  "Exclusive access to off-plan and ready properties",
-  "Expert guidance throughout your buying journey",
-  "Transparent pricing with no hidden costs",
-  "Post-purchase support and property management",
-  "Multilingual team serving clients worldwide",
-];
 
 /* ================= ANIMATIONS ================= */
 
@@ -62,6 +48,22 @@ const fadeRight: Variants = {
 
 export default function WhyChooseUs() {
   const router = useRouter();
+  const { t } = useTranslation();
+
+  const stats = [
+    { icon: Building2, value: "500+", label: t("about.stat.properties") },
+    { icon: Users, value: "2000+", label: t("about.stat.happyClients") },
+    { icon: Award, value: "15+", label: t("about.stat.yearsExperience") },
+    { icon: ShieldCheck, value: "100%", label: t("about.stat.trustedService") },
+  ];
+
+  const features = [
+    t("about.feature.exclusiveAccess"),
+    t("about.feature.expertGuidance"),
+    t("about.feature.transparentPricing"),
+    t("about.feature.postPurchase"),
+    t("about.feature.multilingualTeam"),
+  ];
 
   return (
     <section className="bg-white dark:bg-[#0F172A] overflow-hidden transition-colors duration-300">
@@ -125,7 +127,7 @@ export default function WhyChooseUs() {
             >
               <div className="text-center">
                 <div className="text-3xl font-bold">15+</div>
-                <div className="text-sm">Years of Excellence</div>
+                <div className="text-sm">{t("about.yearsOfExcellence")}</div>
               </div>
             </div>
           </motion.div>
@@ -143,23 +145,21 @@ export default function WhyChooseUs() {
               style={{ color: goldenColor }}
               variants={fadeUp}
             >
-              Why GR Premium
+              {t("about.whyGrPremium")}
             </motion.span>
 
             <motion.h2
               className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white"
               variants={fadeUp}
             >
-              Why Choose GR Premium?
+              {t("about.whyChooseGrPremium")}
             </motion.h2>
 
             <motion.p
               className="text-gray-600 dark:text-gray-400 text-base md:text-lg leading-relaxed"
               variants={fadeUp}
             >
-              With over 15 years of experience in Dubai's real estate market,
-              we provide unparalleled service and access to exclusive
-              properties that match your lifestyle and investment goals.
+              {t("about.description")}
             </motion.p>
 
             <motion.ul
@@ -195,7 +195,7 @@ export default function WhyChooseUs() {
               whileTap={{ scale: 0.95 }}
               variants={fadeUp}
             >
-              Get Started Today
+              {t("about.getStartedToday")}
             </motion.button>
           </motion.div>
 

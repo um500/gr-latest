@@ -5,6 +5,7 @@ import Image from "next/image";
 import { useState, useEffect, useRef } from "react";
 import { usePathname } from "next/navigation";
 import EnquiryModal from "@/components/ui/EnquiryModal";
+import { useTranslation } from "@/lib/language-context";
 
 /* 🌐 LANGUAGES */
 const LANGUAGES = [
@@ -32,8 +33,8 @@ export default function NavbarClient({
   const [featureOpen, setFeatureOpen] = useState(false);
   const [openEnquiry, setOpenEnquiry] = useState(false);
 
+  const { lang, setLang, t } = useTranslation();
   const [langOpen, setLangOpen] = useState(false);
-  const [currentLang, setCurrentLang] = useState("en");
   const langRef = useRef<HTMLDivElement>(null);
 
   /* BODY LOCK */
@@ -93,26 +94,26 @@ export default function NavbarClient({
 
           {/* DESKTOP MENU */}
           <ul className="hidden lg:flex items-center gap-6 ml-auto text-sm uppercase tracking-wider">
-            <li><Link href="/" className={isActive("/") ? "text-yellow-400" : ""}>Home</Link></li>
-            <li><Link href="/about" className={isActive("/about") ? "text-yellow-400" : ""}>About Us</Link></li>
-            <li><Link href="/properties" className={isActive("/properties") ? "text-yellow-400" : ""}>Properties</Link></li>
-            <li><Link href="/blog" className={isActive("/blog") ? "text-yellow-400" : ""}>Blog</Link></li>
+            <li><Link href="/" className={isActive("/") ? "text-yellow-400" : ""}>{t("nav.home")}</Link></li>
+            <li><Link href="/about" className={isActive("/about") ? "text-yellow-400" : ""}>{t("nav.aboutUs")}</Link></li>
+            <li><Link href="/properties" className={isActive("/properties") ? "text-yellow-400" : ""}>{t("nav.properties")}</Link></li>
+            <li><Link href="/blog" className={isActive("/blog") ? "text-yellow-400" : ""}>{t("nav.blog")}</Link></li>
 
             <li className="relative group">
               <span className="cursor-pointer hover:text-yellow-400">
-                Feature Plan ▾
+                {t("nav.featurePlan")} ▾
               </span>
               <div className="absolute top-full left-0 hidden group-hover:block bg-black rounded shadow-lg">
                 <Link
                   href="/developers"
                   className="block px-4 py-2 hover:bg-white/10"
                 >
-                  Developers
+                  {t("nav.developers")}
                 </Link>
               </div>
             </li>
 
-            <li><Link href="/contact" className={isActive("/contact") ? "text-yellow-400" : ""}>Contact Us</Link></li>
+            <li><Link href="/contact" className={isActive("/contact") ? "text-yellow-400" : ""}>{t("nav.contactUs")}</Link></li>
           </ul>
 
           {/* RIGHT ACTIONS */}
@@ -122,21 +123,21 @@ export default function NavbarClient({
                 onClick={() => setLangOpen(!langOpen)}
                 className="flex items-center gap-1 text-yellow-400 text-sm"
               >
-                🌐 {currentLang.toUpperCase()} ▾
+                🌐 {lang.toUpperCase()} ▾
               </button>
 
               {langOpen && (
                 <div className="absolute right-0 mt-3 w-48 bg-white text-black rounded-xl shadow-xl overflow-hidden z-[2000]">
-                  {LANGUAGES.map((lang) => (
+                  {LANGUAGES.map((l) => (
                     <button
-                      key={lang.code}
+                      key={l.code}
                       onClick={() => {
-                        setCurrentLang(lang.code);
+                        setLang(l.code);
                         setLangOpen(false);
                       }}
                       className="w-full text-left px-4 py-2 hover:bg-gray-100"
                     >
-                      {lang.label}
+                      {l.label}
                     </button>
                   ))}
                 </div>
@@ -165,21 +166,21 @@ export default function NavbarClient({
             </button>
 
             <h2 className="text-xl font-bold mb-6">
-              GR Premium Properties
+              {t("nav.grPremiumProperties")}
             </h2>
 
             <ul className="space-y-5 text-sm uppercase tracking-wider font-medium">
-              <li><Link href="/" onClick={() => setDrawerOpen(false)}>Home</Link></li>
-              <li><Link href="/about" onClick={() => setDrawerOpen(false)}>About Us</Link></li>
-              <li><Link href="/properties" onClick={() => setDrawerOpen(false)}>Properties</Link></li>
-              <li><Link href="/blog" onClick={() => setDrawerOpen(false)}>Blog</Link></li>
+              <li><Link href="/" onClick={() => setDrawerOpen(false)}>{t("nav.home")}</Link></li>
+              <li><Link href="/about" onClick={() => setDrawerOpen(false)}>{t("nav.aboutUs")}</Link></li>
+              <li><Link href="/properties" onClick={() => setDrawerOpen(false)}>{t("nav.properties")}</Link></li>
+              <li><Link href="/blog" onClick={() => setDrawerOpen(false)}>{t("nav.blog")}</Link></li>
 
               <li>
                 <button
                   onClick={() => setFeatureOpen(!featureOpen)}
                   className="flex justify-between w-full"
                 >
-                  Feature Plan
+                  {t("nav.featurePlan")}
                   <span>{featureOpen ? "−" : "+"}</span>
                 </button>
 
@@ -190,16 +191,16 @@ export default function NavbarClient({
                         href="/developers"
                         onClick={() => setDrawerOpen(false)}
                       >
-                        Developers
+                        {t("nav.developers")}
                       </Link>
                     </li>
                   </ul>
                 )}
               </li>
 
-              <li><Link href="/how-it-works" onClick={() => setDrawerOpen(false)}>How It Works</Link></li>
-              <li><Link href="/Media" onClick={() => setDrawerOpen(false)}>Media</Link></li>
-              <li><Link href="/contact" onClick={() => setDrawerOpen(false)}>Contact Us</Link></li>
+              <li><Link href="/how-it-works" onClick={() => setDrawerOpen(false)}>{t("nav.howItWorks")}</Link></li>
+              <li><Link href="/Media" onClick={() => setDrawerOpen(false)}>{t("nav.media")}</Link></li>
+              <li><Link href="/contact" onClick={() => setDrawerOpen(false)}>{t("nav.contactUs")}</Link></li>
 
               <li>
                 <button
@@ -209,7 +210,7 @@ export default function NavbarClient({
                   }}
                   className="w-full bg-yellow-500 text-black py-2 rounded font-semibold"
                 >
-                  Enquire Now
+                  {t("nav.enquireNow")}
                 </button>
               </li>
             </ul>

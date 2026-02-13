@@ -7,6 +7,7 @@ import Footer from "@/components/layout/Footer";
 import { FloatingButtons } from "@/components/ui/FloatingButtons";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import { ThemeProvider } from "next-themes";
+import { LanguageProvider } from "@/lib/language-context";
 
 
 const geistSans = Geist({
@@ -34,6 +35,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
   <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0F172A] text-white`}>
 
+    <LanguageProvider>
     <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
 
       <AnnouncementBar />
@@ -44,6 +46,7 @@ export default function RootLayout({
       <FloatingButtons />
 
     </ThemeProvider>
+    </LanguageProvider>
   </body>
 </html>
 

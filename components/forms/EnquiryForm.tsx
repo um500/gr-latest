@@ -3,6 +3,7 @@
 import { Send, X } from "lucide-react";
 import { useEffect, useState } from "react";
 import emailjs from "@emailjs/browser";
+import { useTranslation } from "@/lib/language-context";
 
 /* ---------------- OPTIONS ---------------- */
 const PROPERTY_OPTIONS = [
@@ -34,6 +35,7 @@ export default function EnquiryForm({
   onClose?: () => void;   // ✅ optional to prevent error
   defaultProperty?: string;
 }) {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
@@ -102,7 +104,7 @@ useEffect(() => {
 
 
       .catch(() => {
-        setError("Something went wrong. Please try again ❌");
+        setError(t("form.errorMessage"));
       })
       .finally(() => setLoading(false));
   };
@@ -130,23 +132,23 @@ useEffect(() => {
         </button>
 
         <h2 className="text-2xl font-bold mb-6 text-center">
-          Send Enquiry
+          {t("form.sendEnquiry")}
         </h2>
 
         <form
           onSubmit={handleSubmit}
           className="grid grid-cols-1 sm:grid-cols-2 gap-6"
         >
-          <Input name="name" label="Full Name" placeholder="Enter your full name" />
-          <Input name="email" label="Email" type="email" placeholder="your@email.com" />
-          <Input name="phone" label="Phone Number" placeholder="+971 XX XXX XXXX" />
+          <Input name="name" label={t("form.fullName")} placeholder={t("form.enterFullName")} />
+          <Input name="email" label={t("form.email")} type="email" placeholder={t("form.emailPlaceholder")} />
+          <Input name="phone" label={t("form.phoneNumber")} placeholder={t("form.phonePlaceholder")} />
 
-          <Select name="country" label="Country of Residence" options={COUNTRY_OPTIONS} />
+          <Select name="country" label={t("form.countryOfResidence")} options={COUNTRY_OPTIONS} />
 
           {/* PROPERTY */}
           <div className="sm:col-span-2">
             <label className="text-sm font-medium">
-              Interested Property <span className="text-red-500">*</span>
+              {t("form.interestedProperty")} <span className="text-red-500">*</span>
             </label>
 
             <select
@@ -159,11 +161,11 @@ useEffect(() => {
               }}
               className="mt-2 w-full rounded-lg border-2 border-yellow-300 px-4 py-3 focus:ring-2 focus:ring-yellow-500"
             >
-              <option value="">Select a property</option>
+              <option value="">{t("form.selectProperty")}</option>
               {PROPERTY_OPTIONS.map((p) => (
                 <option key={p} value={p}>{p}</option>
               ))}
-              <option value="Other">Other</option>
+              <option value="Other">{t("form.other")}</option>
             </select>
           </div>
 
@@ -171,8 +173,8 @@ useEffect(() => {
             <div className="sm:col-span-2">
               <Input
                 name="other_property"
-                label="Other Property Name"
-                placeholder="Enter property name"
+                label={t("form.otherPropertyName")}
+                placeholder={t("form.enterPropertyName")}
                 value={otherProperty}
                 onChange={(e: any) => setOtherProperty(e.target.value)}
               />
@@ -182,7 +184,7 @@ useEffect(() => {
           <div className="sm:col-span-2 flex items-start gap-3">
             <input type="checkbox" required name="consent_status" value="Yes" />
             <p className="text-sm">
-              I authorize company representatives to Call, SMS, Email or WhatsApp me.
+              {t("form.consent")}
             </p>
           </div>
 
@@ -193,7 +195,7 @@ useEffect(() => {
               className="w-full bg-yellow-500 hover:bg-yellow-600 text-white py-3 rounded-lg flex items-center justify-center gap-2 font-medium"
             >
               <Send size={18} />
-              {loading ? "Sending..." : "Send Enquiry"}
+              {loading ? t("form.sending") : t("form.sendEnquiry")}
             </button>
 
             {success && (

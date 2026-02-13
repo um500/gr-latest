@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import { useTranslation } from "@/lib/language-context";
 
 interface TestimonialItem {
   id: number;
@@ -66,6 +67,7 @@ function StarIcon() {
 export default function Testimonials() {
   const [index, setIndex] = useState(0);
   const intervalRef = useRef<NodeJS.Timeout | null>(null);
+  const { t } = useTranslation();
 
   const startAutoSlide = () => {
     intervalRef.current = setInterval(() => {
@@ -92,10 +94,10 @@ export default function Testimonials() {
             className="text-xs tracking-[0.2em] uppercase font-semibold mb-4"
             style={{ color: goldenColor }}
           >
-            Client Reviews
+            {t("testimonial.clientReviews")}
           </p>
           <h2 className="text-3xl md:text-4xl font-bold font-serif text-gray-900 dark:text-white">
-            What Our Clients Say
+            {t("testimonial.whatOurClientsSay")}
           </h2>
         </div>
 
@@ -116,7 +118,7 @@ export default function Testimonials() {
                   <QuoteIcon />
 
                   <p className="mt-6 italic text-gray-700 dark:text-gray-300 leading-relaxed font-serif">
-                    “{item.text}”
+                    "{item.text}"
                   </p>
 
                   {/* Stars */}

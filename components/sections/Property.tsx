@@ -4,6 +4,7 @@ import { useState } from "react";
 import PropertyCard from "../cards/PropertyCard";
 import EnquiryModal from "@/components/ui/EnquiryModal";
 import Link from "next/link";
+import { useTranslation } from "@/lib/language-context";
 
 type PropertyProps = {
   properties: any[];
@@ -12,6 +13,7 @@ type PropertyProps = {
 export default function Property({ properties }: PropertyProps) {
   const [openEnquiry, setOpenEnquiry] = useState(false);
   const [selectedProperty, setSelectedProperty] = useState<any>(null);
+  const { t } = useTranslation();
 
   return (
     <section className="py-24 px-6 bg-[#E5E7EB] dark:bg-[#0F172A] transition-colors duration-300">
@@ -20,15 +22,15 @@ export default function Property({ properties }: PropertyProps) {
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm tracking-[0.2em] font-semibold uppercase mb-4 text-[#C9A227]">
-            Projects
+            {t("property.projects")}
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold mb-5 text-gray-900 dark:text-white">
-            Featured Properties
+            {t("property.featuredProperties")}
           </h2>
 
           <p className="text-gray-600 dark:text-gray-400 text-base leading-relaxed">
-            Discover our handpicked selection of premium real estate projects.
+            {t("property.description")}
           </p>
         </div>
 
@@ -76,7 +78,7 @@ export default function Property({ properties }: PropertyProps) {
               duration-300
             "
           >
-            View All Properties →
+            {t("property.viewAllProperties")}
           </Link>
         </div>
     </section>

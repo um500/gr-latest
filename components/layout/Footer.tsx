@@ -6,11 +6,13 @@ import { SiFacebook, SiInstagram, SiX, SiLinkedin } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import EnquiryModal from "@/components/ui/EnquiryModal";
+import { useTranslation } from "@/lib/language-context";
 
 const goldenColor = "#D4A843";
 
 export default function Footer() {
   const [open, setOpen] = useState(false);
+  const { t } = useTranslation();
 
   /* ===== Scroll Lock Fix ===== */
   useEffect(() => {
@@ -43,16 +45,16 @@ export default function Footer() {
                 />
                 <div>
                   <h3 className="text-white text-sm font-bold leading-tight">
-                    GR Premium
+                    {t("footer.grPremium")}
                   </h3>
                   <p className="text-[10px] tracking-[0.15em] uppercase text-gray-500">
-                    Properties LLC
+                    {t("footer.propertiesLlc")}
                   </p>
                 </div>
               </div>
 
               <p className="text-sm text-gray-400 leading-relaxed mb-6">
-                Your trusted partner in finding luxury properties in Dubai and beyond.
+                {t("footer.description")}
               </p>
 
               {/* Social Icons */}
@@ -76,17 +78,17 @@ export default function Footer() {
             {/* ================= QUICK LINKS ================= */}
             <div>
               <h4 className="text-white text-sm font-bold uppercase mb-6 tracking-wide">
-                Quick Links
+                {t("footer.quickLinks")}
               </h4>
               <ul className="space-y-3">
                 {[
-                  { name: "Home", path: "/" },
-                  { name: "About Us", path: "/about" },
-                  { name: "Properties", path: "/properties" },
-                  { name: "Blog", path: "/blog" },
-                  { name: "Contact Us", path: "/contact" },
+                  { name: t("nav.home"), path: "/" },
+                  { name: t("nav.aboutUs"), path: "/about" },
+                  { name: t("nav.properties"), path: "/properties" },
+                  { name: t("nav.blog"), path: "/blog" },
+                  { name: t("nav.contactUs"), path: "/contact" },
                 ].map((link) => (
-                  <li key={link.name}>
+                  <li key={link.path}>
                     <Link
                       href={link.path}
                       className="text-sm hover:text-white transition-colors duration-300"
@@ -101,12 +103,12 @@ export default function Footer() {
             {/* ================= PROPERTIES ================= */}
             <div>
               <h4 className="text-white text-sm font-bold uppercase mb-6 tracking-wide">
-                Properties
+                {t("footer.properties")}
               </h4>
               <ul className="space-y-3">
-                {["Apartments", "Villas", "Penthouses", "Townhouses"].map(
-                  (item) => (
-                    <li key={item}>
+                {[t("footer.apartments"), t("footer.villas"), t("footer.penthouses"), t("footer.townhouses")].map(
+                  (item, i) => (
+                    <li key={i}>
                       <Link
                         href="/properties"
                         className="text-sm hover:text-white transition-colors duration-300"
@@ -122,7 +124,7 @@ export default function Footer() {
             {/* ================= CONTACT ================= */}
             <div>
               <h4 className="text-white text-sm font-bold uppercase mb-6 tracking-wide">
-                Contact Info
+                {t("footer.contactInfo")}
               </h4>
 
               <ul className="space-y-4 text-sm">
@@ -149,7 +151,7 @@ export default function Footer() {
                            transition-all duration-300 hover:scale-[1.03] active:scale-[0.97]"
                 style={{ backgroundColor: goldenColor }}
               >
-                Enquire Now
+                {t("footer.enquireNow")}
               </button>
             </div>
 
@@ -159,7 +161,7 @@ export default function Footer() {
         {/* Bottom Bar */}
         <div className="border-t border-[#2a3a4a] py-6 text-center">
           <p className="text-xs text-gray-500">
-            © 2026 GR Premium Properties. All rights reserved.
+            {t("footer.copyright")}
           </p>
         </div>
       </footer>

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { motion } from "framer-motion";
 import { BedDouble, CalendarDays, Download, ChevronLeft, ChevronRight } from "lucide-react";
 import BrochureModal from "@/components/ui/BrochureModal";
+import { useTranslation } from "@/lib/language-context";
 
 
 
@@ -18,6 +19,8 @@ export default function PropertyCard({
   property: any;
   onEnquire?: (p: any) => void;
 }) {
+  const { t } = useTranslation();
+
   const images =
     property?.images?.map((img: any) => img?.asset?.url).filter(Boolean) || [];
 
@@ -116,7 +119,7 @@ export default function PropertyCard({
               <div key={i} className="flex items-start gap-2">
                 <BedDouble size={16} />
                 <span>
-                  <strong>{unit?.beds}</strong> Bed • {unit?.size} Sq Ft •{" "}
+                  <strong>{unit?.beds}</strong> {t("property.bed")} • {unit?.size} Sq Ft •{" "}
                   <strong>AED {unit?.price}</strong>
                 </span>
               </div>
@@ -127,7 +130,7 @@ export default function PropertyCard({
           {property?.handover && (
             <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400 mb-6">
               <CalendarDays size={16} />
-              <span>Handover: {property.handover}</span>
+              <span>{t("property.handover")}: {property.handover}</span>
             </div>
           )}
 
@@ -137,7 +140,7 @@ export default function PropertyCard({
               className="flex-1 py-2.5 rounded-xl text-sm font-medium border border-[#C9A227] text-[#C9A227] hover:bg-[#C9A227] hover:text-black transition-all duration-300 flex items-center justify-center gap-2"
             >
               <Download size={16} />
-              Brochure
+              {t("property.brochure")}
             </button>
 
             <button
@@ -145,7 +148,7 @@ export default function PropertyCard({
               className="flex-1 py-2.5 rounded-xl text-sm font-semibold text-black transition-all duration-300 hover:opacity-90"
               style={{ backgroundColor: goldenColor }}
             >
-              Enquire
+              {t("property.enquire")}
             </button>
           </div>
         </div>
