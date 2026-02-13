@@ -358,6 +358,8 @@ export const announcementQuery = groq`
 | order(_createdAt desc){
   title,
   title_hi, title_ar, title_ru,
+  description,
+  description_hi, description_ar, description_ru,
   eventDate,
   city,
   city_hi, city_ar, city_ru,

@@ -78,6 +78,14 @@ export default defineType({
           !((document?.supportedLanguages as string[]) || []).includes(lang.id),
       }),
       defineField({
+        name: `description_${lang.id}`,
+        title: `Description (${lang.title})`,
+        type: "text",
+        group: "translations",
+        hidden: ({ document }) =>
+          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+      }),
+      defineField({
         name: `city_${lang.id}`,
         title: `City (${lang.title})`,
         type: "string",
