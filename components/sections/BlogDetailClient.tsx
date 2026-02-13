@@ -4,6 +4,49 @@ import { PortableText } from "@portabletext/react";
 import { urlFor } from "@/lib/sanity.image";
 import { useTranslation } from "@/lib/language-context";
 
+function mergeImagesIntoTranslation(englishContent: any[], translatedContent: any[]) {
+  if (!englishContent || !translatedContent) return translatedContent || englishContent;
+
+  const englishImages = englishContent.filter((block: any) => block._type === "image");
+  const translatedHasImages = translatedContent.some((block: any) => block._type === "image");
+
+  if (translatedHasImages || englishImages.length === 0) return translatedContent;
+
+  const textBlocks = translatedContent.filter((block: any) => block._type !== "image");
+  const engTextBlocks = englishContent.filter((block: any) => block._type !== "image");
+
+  const imagePositions: { afterIndex: number; image: any }[] = [];
+  let textIndex = 0;
+  for (let i = 0; i < englishContent.length; i++) {
+    if (englishContent[i]._type === "image") {
+      imagePositions.push({ afterIndex: textIndex - 1, image: englishContent[i] });
+    } else {
+      textIndex++;
+    }
+  }
+
+  const ratio = textBlocks.length / Math.max(engTextBlocks.length, 1);
+
+  const merged: any[] = [];
+  const insertAfter = new Map<number, any[]>();
+
+  for (const pos of imagePositions) {
+    const mappedIndex = Math.round(pos.afterIndex * ratio);
+    const key = Math.max(0, Math.min(mappedIndex, textBlocks.length - 1));
+    if (!insertAfter.has(key)) insertAfter.set(key, []);
+    insertAfter.get(key)!.push(pos.image);
+  }
+
+  for (let i = 0; i < textBlocks.length; i++) {
+    merged.push(textBlocks[i]);
+    if (insertAfter.has(i)) {
+      merged.push(...insertAfter.get(i)!);
+    }
+  }
+
+  return merged;
+}
+
 export default function BlogDetailClient({ blog }: { blog: any }) {
   const { lang } = useTranslation();
 
@@ -14,7 +57,11 @@ export default function BlogDetailClient({ blog }: { blog: any }) {
 
   const title = getLocalized(blog, "title");
   const subtitle = getLocalized(blog, "subtitle");
-  const content = getLocalized(blog, "content");
+
+  const rawTranslatedContent = lang !== "en" ? blog[`content_${lang}`] : null;
+  const content = rawTranslatedContent
+    ? mergeImagesIntoTranslation(blog.content, rawTranslatedContent)
+    : blog.content;
 
   return (
     <>
