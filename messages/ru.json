@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "Лучшие локации",
   "developerDetail.about": "О компании",
   "developerDetail.projectsBy": "Проекты",
-  "developerDetail.noProjectsYet": "Проекты пока не добавлены."
+  "developerDetail.noProjectsYet": "Проекты пока не добавлены.",
+
+  "brochure.downloadBrochure": "Скачать Брошюру",
+  "brochure.fullName": "Полное имя",
+  "brochure.emailAddress": "Электронная почта",
+  "brochure.phoneNumber": "Номер телефона",
+  "brochure.country": "Страна",
+  "brochure.submitting": "Отправка...",
+  "brochure.submitDownload": "Отправить и Скачать",
+  "brochure.cancel": "Отмена",
+  "brochure.error": "Что-то пошло не так. Попробуйте ещё раз.",
+  "property.sqFt": "кв. фут",
+  "property.aed": "AED",
+  "announcement.viewDetails": "Подробнее",
+  "country.uae": "ОАЭ",
+  "country.india": "Индия",
+  "country.uk": "Великобритания",
+  "country.us": "США",
+  "country.saudiArabia": "Саудовская Аравия",
+  "country.other": "Другое"
 }

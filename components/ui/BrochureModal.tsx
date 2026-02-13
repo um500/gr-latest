@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import { useTranslation } from "@/lib/language-context";
 
 const goldenColor = "#C9A227";
 
@@ -24,6 +25,7 @@ export default function BrochureModal({
   });
 
   const [loading, setLoading] = useState(false);
+  const { t } = useTranslation();
 
   const handleChange = (e: any) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -53,7 +55,7 @@ export default function BrochureModal({
       onClose();
       setForm({ name: "", email: "", phone: "", country: "" });
     } catch (error) {
-      alert("Something went wrong. Please try again.");
+      alert(t("brochure.error"));
     } finally {
       setLoading(false);
     }
@@ -75,7 +77,7 @@ export default function BrochureModal({
             className="bg-white dark:bg-[#1F2937] rounded-2xl p-8 w-full max-w-md shadow-2xl"
           >
             <h2 className="text-xl font-bold mb-2 text-center">
-              Download Brochure
+              {t("brochure.downloadBrochure")}
             </h2>
 
             <p className="text-sm text-gray-600 dark:text-gray-400 mb-6 text-center">
@@ -87,7 +89,7 @@ export default function BrochureModal({
                 type="text"
                 name="name"
                 required
-                placeholder="Full Name"
+                placeholder={t("brochure.fullName")}
                 value={form.name}
                 onChange={handleChange}
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent"
@@ -97,7 +99,7 @@ export default function BrochureModal({
                 type="email"
                 name="email"
                 required
-                placeholder="Email Address"
+                placeholder={t("brochure.emailAddress")}
                 value={form.email}
                 onChange={handleChange}
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent"
@@ -107,7 +109,7 @@ export default function BrochureModal({
                 type="tel"
                 name="phone"
                 required
-                placeholder="Phone Number"
+                placeholder={t("brochure.phoneNumber")}
                 value={form.phone}
                 onChange={handleChange}
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent"
@@ -117,7 +119,7 @@ export default function BrochureModal({
                 type="text"
                 name="country"
                 required
-                placeholder="Country"
+                placeholder={t("brochure.country")}
                 value={form.country}
                 onChange={handleChange}
                 className="w-full p-3 rounded-lg border border-gray-300 dark:border-gray-600 bg-transparent"
@@ -129,7 +131,7 @@ export default function BrochureModal({
                 className="w-full py-3 rounded-xl font-semibold text-black transition-all duration-300"
                 style={{ backgroundColor: goldenColor }}
               >
-                {loading ? "Submitting..." : "Submit & Download"}
+                {loading ? t("brochure.submitting") : t("brochure.submitDownload")}
               </button>
             </form>
 
@@ -137,7 +139,7 @@ export default function BrochureModal({
               onClick={onClose}
               className="mt-4 text-sm text-gray-500 w-full"
             >
-              Cancel
+              {t("brochure.cancel")}
             </button>
           </motion.div>
         </motion.div>

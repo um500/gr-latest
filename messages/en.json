@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "Prime Locations",
   "developerDetail.about": "About",
   "developerDetail.projectsBy": "Projects by",
-  "developerDetail.noProjectsYet": "No projects added yet."
+  "developerDetail.noProjectsYet": "No projects added yet.",
+
+  "brochure.downloadBrochure": "Download Brochure",
+  "brochure.fullName": "Full Name",
+  "brochure.emailAddress": "Email Address",
+  "brochure.phoneNumber": "Phone Number",
+  "brochure.country": "Country",
+  "brochure.submitting": "Submitting...",
+  "brochure.submitDownload": "Submit & Download",
+  "brochure.cancel": "Cancel",
+  "brochure.error": "Something went wrong. Please try again.",
+  "property.sqFt": "Sq Ft",
+  "property.aed": "AED",
+  "announcement.viewDetails": "View Details",
+  "country.uae": "United Arab Emirates",
+  "country.india": "India",
+  "country.uk": "United Kingdom",
+  "country.us": "United States",
+  "country.saudiArabia": "Saudi Arabia",
+  "country.other": "Other"
 }

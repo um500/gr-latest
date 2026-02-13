@@ -119,8 +119,8 @@ export default function PropertyCard({
               <div key={i} className="flex items-start gap-2">
                 <BedDouble size={16} />
                 <span>
-                  <strong>{unit?.beds}</strong> {t("property.bed")} • {unit?.size} Sq Ft •{" "}
-                  <strong>AED {unit?.price}</strong>
+                  <strong>{unit?.beds}</strong> {t("property.bed")} • {unit?.size} {t("property.sqFt")} •{" "}
+                  <strong>{t("property.aed")} {unit?.price}</strong>
                 </span>
               </div>
             ))}

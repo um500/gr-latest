@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { sanityClient } from "@/lib/sanity.client";
 import { announcementQuery } from "@/lib/sanity.queries";
+import T from "@/components/ui/T";
 
 export default async function AnnouncementBar() {
   const announcements =
@@ -20,7 +21,7 @@ export default async function AnnouncementBar() {
                   href={`/announcement/${item.slug}`}
                   className="bg-black text-white px-3 py-1 rounded text-xs font-semibold"
                 >
-                  View Details
+                  <T k="announcement.viewDetails" />
                 </Link>
               )}
             </span>

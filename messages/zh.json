@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "优质地段",
   "developerDetail.about": "关于",
   "developerDetail.projectsBy": "项目来自",
-  "developerDetail.noProjectsYet": "暂无项目。"
+  "developerDetail.noProjectsYet": "暂无项目。",
+
+  "brochure.downloadBrochure": "下载手册",
+  "brochure.fullName": "全名",
+  "brochure.emailAddress": "电子邮件地址",
+  "brochure.phoneNumber": "电话号码",
+  "brochure.country": "国家",
+  "brochure.submitting": "提交中...",
+  "brochure.submitDownload": "提交并下载",
+  "brochure.cancel": "取消",
+  "brochure.error": "出现错误，请重试。",
+  "property.sqFt": "平方英尺",
+  "property.aed": "AED",
+  "announcement.viewDetails": "查看详情",
+  "country.uae": "阿联酋",
+  "country.india": "印度",
+  "country.uk": "英国",
+  "country.us": "美国",
+  "country.saudiArabia": "沙特阿拉伯",
+  "country.other": "其他"
 }

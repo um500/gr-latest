@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "一等地",
   "developerDetail.about": "について",
   "developerDetail.projectsBy": "のプロジェクト",
-  "developerDetail.noProjectsYet": "プロジェクトはまだ追加されていません。"
+  "developerDetail.noProjectsYet": "プロジェクトはまだ追加されていません。",
+
+  "brochure.downloadBrochure": "パンフレットをダウンロード",
+  "brochure.fullName": "氏名",
+  "brochure.emailAddress": "メールアドレス",
+  "brochure.phoneNumber": "電話番号",
+  "brochure.country": "国",
+  "brochure.submitting": "送信中...",
+  "brochure.submitDownload": "送信してダウンロード",
+  "brochure.cancel": "キャンセル",
+  "brochure.error": "エラーが発生しました。もう一度お試しください。",
+  "property.sqFt": "平方フィート",
+  "property.aed": "AED",
+  "announcement.viewDetails": "詳細を見る",
+  "country.uae": "アラブ首長国連邦",
+  "country.india": "インド",
+  "country.uk": "イギリス",
+  "country.us": "アメリカ",
+  "country.saudiArabia": "サウジアラビア",
+  "country.other": "その他"
 }

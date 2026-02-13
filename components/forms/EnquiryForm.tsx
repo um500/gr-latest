@@ -19,15 +19,6 @@ const PROPERTY_OPTIONS = [
   "Dubai Properties",
 ];
 
-const COUNTRY_OPTIONS = [
-  "United Arab Emirates",
-  "India",
-  "United Kingdom",
-  "United States",
-  "Saudi Arabia",
-  "Other",
-];
-
 export default function EnquiryForm({
   onClose,
   defaultProperty = "",
@@ -36,6 +27,14 @@ export default function EnquiryForm({
   defaultProperty?: string;
 }) {
   const { t } = useTranslation();
+  const COUNTRY_OPTIONS = [
+    t("country.uae"),
+    t("country.india"),
+    t("country.uk"),
+    t("country.us"),
+    t("country.saudiArabia"),
+    t("country.other"),
+  ];
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");

@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "مواقع رئيسية",
   "developerDetail.about": "حول",
   "developerDetail.projectsBy": "مشاريع",
-  "developerDetail.noProjectsYet": "لم يتم إضافة مشاريع بعد."
+  "developerDetail.noProjectsYet": "لم يتم إضافة مشاريع بعد.",
+
+  "brochure.downloadBrochure": "تحميل الكتيب",
+  "brochure.fullName": "الاسم الكامل",
+  "brochure.emailAddress": "البريد الإلكتروني",
+  "brochure.phoneNumber": "رقم الهاتف",
+  "brochure.country": "الدولة",
+  "brochure.submitting": "جاري الإرسال...",
+  "brochure.submitDownload": "إرسال وتحميل",
+  "brochure.cancel": "إلغاء",
+  "brochure.error": "حدث خطأ. يرجى المحاولة مرة أخرى.",
+  "property.sqFt": "قدم مربع",
+  "property.aed": "درهم",
+  "announcement.viewDetails": "عرض التفاصيل",
+  "country.uae": "الإمارات العربية المتحدة",
+  "country.india": "الهند",
+  "country.uk": "المملكة المتحدة",
+  "country.us": "الولايات المتحدة",
+  "country.saudiArabia": "المملكة العربية السعودية",
+  "country.other": "أخرى"
 }

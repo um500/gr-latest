@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "प्रमुख स्थान",
   "developerDetail.about": "के बारे में",
   "developerDetail.projectsBy": "द्वारा प्रोजेक्ट",
-  "developerDetail.noProjectsYet": "अभी तक कोई प्रोजेक्ट नहीं जोड़ा गया।"
+  "developerDetail.noProjectsYet": "अभी तक कोई प्रोजेक्ट नहीं जोड़ा गया।",
+
+  "brochure.downloadBrochure": "ब्रोशर डाउनलोड करें",
+  "brochure.fullName": "पूरा नाम",
+  "brochure.emailAddress": "ईमेल पता",
+  "brochure.phoneNumber": "फ़ोन नंबर",
+  "brochure.country": "देश",
+  "brochure.submitting": "भेज रहे हैं...",
+  "brochure.submitDownload": "सबमिट करें और डाउनलोड करें",
+  "brochure.cancel": "रद्द करें",
+  "brochure.error": "कुछ गलत हो गया। कृपया पुनः प्रयास करें।",
+  "property.sqFt": "वर्ग फ़ुट",
+  "property.aed": "AED",
+  "announcement.viewDetails": "विवरण देखें",
+  "country.uae": "संयुक्त अरब अमीरात",
+  "country.india": "भारत",
+  "country.uk": "यूनाइटेड किंगडम",
+  "country.us": "संयुक्त राज्य अमेरिका",
+  "country.saudiArabia": "सऊदी अरब",
+  "country.other": "अन्य"
 }

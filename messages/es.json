@@ -212,5 +212,24 @@
   "developerDetail.primeLocations": "Ubicaciones Premium",
   "developerDetail.about": "Acerca de",
   "developerDetail.projectsBy": "Proyectos de",
-  "developerDetail.noProjectsYet": "Aún no se han añadido proyectos."
+  "developerDetail.noProjectsYet": "Aún no se han añadido proyectos.",
+
+  "brochure.downloadBrochure": "Descargar Folleto",
+  "brochure.fullName": "Nombre Completo",
+  "brochure.emailAddress": "Correo Electrónico",
+  "brochure.phoneNumber": "Número de Teléfono",
+  "brochure.country": "País",
+  "brochure.submitting": "Enviando...",
+  "brochure.submitDownload": "Enviar y Descargar",
+  "brochure.cancel": "Cancelar",
+  "brochure.error": "Algo salió mal. Por favor, inténtelo de nuevo.",
+  "property.sqFt": "Pies²",
+  "property.aed": "AED",
+  "announcement.viewDetails": "Ver Detalles",
+  "country.uae": "Emiratos Árabes Unidos",
+  "country.india": "India",
+  "country.uk": "Reino Unido",
+  "country.us": "Estados Unidos",
+  "country.saudiArabia": "Arabia Saudita",
+  "country.other": "Otro"
 }
