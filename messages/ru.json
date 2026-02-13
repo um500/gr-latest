@@ -201,5 +201,16 @@
   "media.title": "Медиа",
   "media.subtitle": "Изображения и Видео",
   "media.image": "Изображение",
-  "media.video": "Видео"
+  "media.video": "Видео",
+
+  "developerDetail.ourPartner": "Наш Партнёр",
+  "developerDetail.heroDescription": "Премиальный застройщик, формирующий горизонт Дубая",
+  "developerDetail.viewProjects": "Посмотреть проекты",
+  "developerDetail.yearsExperience": "Лет опыта",
+  "developerDetail.projectsDelivered": "Проектов сдано",
+  "developerDetail.homesSold": "Домов продано",
+  "developerDetail.primeLocations": "Лучшие локации",
+  "developerDetail.about": "О компании",
+  "developerDetail.projectsBy": "Проекты",
+  "developerDetail.noProjectsYet": "Проекты пока не добавлены."
 }

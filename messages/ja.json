@@ -201,5 +201,16 @@
   "media.title": "メディア",
   "media.subtitle": "画像と動画",
   "media.image": "画像",
-  "media.video": "動画"
+  "media.video": "動画",
+
+  "developerDetail.ourPartner": "パートナー",
+  "developerDetail.heroDescription": "ドバイのスカイラインを形作るプレミアム不動産開発会社",
+  "developerDetail.viewProjects": "プロジェクトを見る",
+  "developerDetail.yearsExperience": "年の経験",
+  "developerDetail.projectsDelivered": "プロジェクト完了",
+  "developerDetail.homesSold": "販売済み住宅",
+  "developerDetail.primeLocations": "一等地",
+  "developerDetail.about": "について",
+  "developerDetail.projectsBy": "のプロジェクト",
+  "developerDetail.noProjectsYet": "プロジェクトはまだ追加されていません。"
 }

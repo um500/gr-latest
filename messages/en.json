@@ -201,5 +201,16 @@
   "media.title": "Media",
   "media.subtitle": "Images & Videos",
   "media.image": "Image",
-  "media.video": "Video"
+  "media.video": "Video",
+
+  "developerDetail.ourPartner": "Our Partner",
+  "developerDetail.heroDescription": "Premium real estate developer shaping Dubai's skyline",
+  "developerDetail.viewProjects": "View Projects",
+  "developerDetail.yearsExperience": "Years Experience",
+  "developerDetail.projectsDelivered": "Projects Delivered",
+  "developerDetail.homesSold": "Homes Sold",
+  "developerDetail.primeLocations": "Prime Locations",
+  "developerDetail.about": "About",
+  "developerDetail.projectsBy": "Projects by",
+  "developerDetail.noProjectsYet": "No projects added yet."
 }

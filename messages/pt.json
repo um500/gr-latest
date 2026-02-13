@@ -201,5 +201,16 @@
   "media.title": "Mídia",
   "media.subtitle": "Imagens e Vídeos",
   "media.image": "Imagem",
-  "media.video": "Vídeo"
+  "media.video": "Vídeo",
+
+  "developerDetail.ourPartner": "Nosso Parceiro",
+  "developerDetail.heroDescription": "Desenvolvedor imobiliário premium moldando o horizonte de Dubai",
+  "developerDetail.viewProjects": "Ver Projetos",
+  "developerDetail.yearsExperience": "Anos de Experiência",
+  "developerDetail.projectsDelivered": "Projetos Entregues",
+  "developerDetail.homesSold": "Casas Vendidas",
+  "developerDetail.primeLocations": "Localizações Premium",
+  "developerDetail.about": "Sobre",
+  "developerDetail.projectsBy": "Projetos de",
+  "developerDetail.noProjectsYet": "Nenhum projeto adicionado ainda."
 }

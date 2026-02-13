@@ -201,5 +201,16 @@
   "media.title": "Medios",
   "media.subtitle": "Imágenes y Videos",
   "media.image": "Imagen",
-  "media.video": "Video"
+  "media.video": "Video",
+
+  "developerDetail.ourPartner": "Nuestro Socio",
+  "developerDetail.heroDescription": "Promotor inmobiliario premium que da forma al horizonte de Dubái",
+  "developerDetail.viewProjects": "Ver Proyectos",
+  "developerDetail.yearsExperience": "Años de Experiencia",
+  "developerDetail.projectsDelivered": "Proyectos Entregados",
+  "developerDetail.homesSold": "Viviendas Vendidas",
+  "developerDetail.primeLocations": "Ubicaciones Premium",
+  "developerDetail.about": "Acerca de",
+  "developerDetail.projectsBy": "Proyectos de",
+  "developerDetail.noProjectsYet": "Aún no se han añadido proyectos."
 }

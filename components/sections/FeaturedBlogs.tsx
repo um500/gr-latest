@@ -2,6 +2,7 @@ import { sanityClient } from "@/lib/sanity.client";
 import { allBlogsQuery } from "@/lib/sanity.queries";
 import BlogCard from "@/components/cards/BlogCard";
 import Link from "next/link";
+import T from "@/components/ui/T";
 
 export default async function FeaturedBlogs() {
   const blogs = await sanityClient.fetch(allBlogsQuery);
@@ -13,15 +14,15 @@ export default async function FeaturedBlogs() {
         {/* Heading */}
         <div className="text-center max-w-2xl mx-auto mb-12">
           <span className="text-[#C9A227] text-sm font-semibold tracking-[0.2em] uppercase">
-            Blogs
+            <T k="blog.blogs" />
           </span>
 
           <h2 className="text-3xl font-bold mt-3 text-gray-900 dark:text-white">
-            Latest Blogs
+            <T k="blog.latestBlogs" />
           </h2>
 
           <p className="text-gray-600 dark:text-gray-400 mt-4">
-            Insights, news & real estate updates
+            <T k="blog.description" />
           </p>
         </div>
 
@@ -67,7 +68,7 @@ export default async function FeaturedBlogs() {
               duration-300
             "
           >
-            View All Blogs →
+            <T k="blog.viewAllBlogs" />
           </Link>
         </div>
 

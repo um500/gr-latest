@@ -201,5 +201,16 @@
   "media.title": "الوسائط",
   "media.subtitle": "صور وفيديوهات",
   "media.image": "صورة",
-  "media.video": "فيديو"
+  "media.video": "فيديو",
+
+  "developerDetail.ourPartner": "شريكنا",
+  "developerDetail.heroDescription": "مطور عقاري متميز يشكل أفق دبي",
+  "developerDetail.viewProjects": "عرض المشاريع",
+  "developerDetail.yearsExperience": "سنوات الخبرة",
+  "developerDetail.projectsDelivered": "المشاريع المنجزة",
+  "developerDetail.homesSold": "المنازل المباعة",
+  "developerDetail.primeLocations": "مواقع رئيسية",
+  "developerDetail.about": "حول",
+  "developerDetail.projectsBy": "مشاريع",
+  "developerDetail.noProjectsYet": "لم يتم إضافة مشاريع بعد."
 }

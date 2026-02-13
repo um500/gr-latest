@@ -201,5 +201,16 @@
   "media.title": "Médias",
   "media.subtitle": "Images et Vidéos",
   "media.image": "Image",
-  "media.video": "Vidéo"
+  "media.video": "Vidéo",
+
+  "developerDetail.ourPartner": "Notre Partenaire",
+  "developerDetail.heroDescription": "Promoteur immobilier premium façonnant l'horizon de Dubaï",
+  "developerDetail.viewProjects": "Voir les Projets",
+  "developerDetail.yearsExperience": "Années d'Expérience",
+  "developerDetail.projectsDelivered": "Projets Livrés",
+  "developerDetail.homesSold": "Maisons Vendues",
+  "developerDetail.primeLocations": "Emplacements Premium",
+  "developerDetail.about": "À propos de",
+  "developerDetail.projectsBy": "Projets de",
+  "developerDetail.noProjectsYet": "Aucun projet ajouté pour le moment."
 }

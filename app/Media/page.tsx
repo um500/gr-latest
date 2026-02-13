@@ -3,6 +3,7 @@ import ImageCard from "./image-card";
 import VideoCard from "./video-card";
 import Footer from "@/components/layout/Footer";
 import CTA from "@/components/sections/CTA";
+import T from "@/components/ui/T";
 
 const query = `
 *[_type == "media"] | order(_createdAt desc){
@@ -41,10 +42,10 @@ export default async function MediaPage() {
         <div className="relative z-10 flex h-full items-center justify-center text-center text-white">
           <div>
             <h1 className="text-4xl md:text-6xl font-bold">
-              Media
+              <T k="media.title" />
             </h1>
             <p className="mt-3 text-lg text-gray-300">
-              Images & Videos
+              <T k="media.subtitle" />
             </p>
           </div>
         </div>
@@ -62,7 +63,7 @@ export default async function MediaPage() {
               >
                 {/* CARD TYPE LABEL */}
                 <h3 className="text-xs font-semibold uppercase tracking-widest text-[#C9A227]">
-                  {item.mediaType === "image" ? "Image" : "Video"}
+                  {item.mediaType === "image" ? <T k="media.image" /> : <T k="media.video" />}
                 </h3>
 
                 {/* ================= IMAGE CARD ================= */}

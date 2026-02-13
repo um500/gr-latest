@@ -1,10 +1,10 @@
-import { motion, Variants } from "framer-motion";
 import Navbar from "@/components/layout/NavbarServer";
 import Footer from "@/components/layout/Footer";
 import Image from "next/image";
 import { Building2, Users, Award, ShieldCheck } from "lucide-react";
 import { Target, Eye, Heart, Globe } from "lucide-react";
 import CTA from "@/components/sections/CTA";
+import T from "@/components/ui/T";
 
 const goldenColor = "#C9A227";
 
@@ -12,27 +12,27 @@ const goldenColor = "#C9A227";
 
 const values = [
   {
-    title: "Client-First Approach",
-    desc: "Your goals and satisfaction are at the heart of everything we do.",
+    title: "aboutPage.clientFirstApproach",
+    desc: "aboutPage.clientFirstDesc",
     icon: Heart,
   },
   {
-    title: "Excellence",
-    desc: "We maintain the highest standards in service and property selection.",
+    title: "aboutPage.excellence",
+    desc: "aboutPage.excellenceDesc",
     icon: Award,
   },
   {
-    title: "Global Reach",
-    desc: "Serving clients worldwide with multilingual support.",
+    title: "aboutPage.globalReach",
+    desc: "aboutPage.globalReachDesc",
     icon: Globe,
   },
 ];
 
 const stats = [
-  { icon: Building2, value: "500+", label: "PROPERTIES" },
-  { icon: Users, value: "2000+", label: "HAPPY CLIENTS" },
-  { icon: Award, value: "15+", label: "YEARS EXPERIENCE" },
-  { icon: ShieldCheck, value: "100%", label: "TRUSTED SERVICE" },
+  { icon: Building2, value: "500+", label: "about.stat.properties" },
+  { icon: Users, value: "2000+", label: "about.stat.happyClients" },
+  { icon: Award, value: "15+", label: "about.stat.yearsExperience" },
+  { icon: ShieldCheck, value: "100%", label: "about.stat.trustedService" },
 ];
 
 /* ================= PAGE ================= */
@@ -58,16 +58,15 @@ export default function AboutPage() {
           <div className="relative z-10 h-full flex items-center justify-center text-center">
             <div className="max-w-4xl px-6 text-white">
               <p className="text-sm tracking-widest text-yellow-400">
-                WHO WE ARE
+                <T k="aboutPage.whoWeAre" />
               </p>
 
               <h1 className="text-4xl md:text-5xl font-serif mt-3">
-                About GR Premium Properties
+                <T k="aboutPage.title" />
               </h1>
 
               <p className="mt-4 text-gray-200 mx-auto">
-                For over 15 years, we’ve been helping investors and homebuyers
-                find their perfect property in Dubai and the UAE.
+                <T k="aboutPage.heroDescription" />
               </p>
             </div>
           </div>
@@ -87,7 +86,7 @@ export default function AboutPage() {
                     {item.value}
                   </h3>
                   <p className="text-sm tracking-widest text-gray-600 dark:text-gray-400">
-                    {item.label}
+                    <T k={item.label} />
                   </p>
                 </div>
               ))}
@@ -114,42 +113,41 @@ export default function AboutPage() {
               >
                 <div className="text-center">
                   <div className="text-3xl font-bold">15+</div>
-                  <div className="text-sm">Years of Excellence</div>
+                  <div className="text-sm"><T k="about.yearsOfExcellence" /></div>
                 </div>
               </div>
             </div>
 
             <div className="order-2 lg:order-1">
               <p className="text-sm font-semibold tracking-widest uppercase mb-3 text-yellow-600">
-                WHY GR PREMIUM
+                <T k="aboutPage.whyGrPremium" />
               </p>
 
               <h2 className="text-4xl md:text-5xl font-serif font-bold text-gray-900 dark:text-white leading-tight">
-                Why Choose GR <br /> Premium?
+                <T k="aboutPage.whyChooseTitle" />
               </h2>
 
               <p className="mt-6 text-gray-600 dark:text-gray-400 text-lg leading-relaxed max-w-xl">
-                With over 15 years of experience in Dubai's real estate market,
-                we provide unparalleled service and access to exclusive properties.
+                <T k="aboutPage.whyChooseDescription" />
               </p>
 
               <ul className="mt-8 space-y-4 text-gray-700 dark:text-gray-300">
                 {[
-                  "Exclusive access to off-plan and ready properties",
-                  "Expert guidance throughout your buying journey",
-                  "Transparent pricing with no hidden costs",
-                  "Post-purchase support and property management",
-                  "Multilingual team serving clients worldwide",
+                  "about.feature.exclusiveAccess",
+                  "about.feature.expertGuidance",
+                  "about.feature.transparentPricing",
+                  "about.feature.postPurchase",
+                  "about.feature.multilingualTeam",
                 ].map((item, i) => (
                   <li key={i} className="flex items-start gap-3">
                     <span className="mt-2 w-2 h-2 rounded-full bg-yellow-500" />
-                    <span>{item}</span>
+                    <span><T k={item} /></span>
                   </li>
                 ))}
               </ul>
 
               <button className="mt-10 px-8 py-3 rounded-md font-semibold text-black bg-yellow-500 hover:bg-yellow-600 transition">
-                Get Started Today
+                <T k="about.getStartedToday" />
               </button>
             </div>
           </div>
@@ -160,12 +158,12 @@ export default function AboutPage() {
           <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
 
             {[{
-              title: "Our Mission",
-              desc: "To provide exceptional real estate services that exceed expectations.",
+              title: "aboutPage.ourMission",
+              desc: "aboutPage.missionDescription",
               icon: Target,
             },{
-              title: "Our Vision",
-              desc: "To become the most trusted and respected real estate advisory brand.",
+              title: "aboutPage.ourVision",
+              desc: "aboutPage.visionDescription",
               icon: Eye,
             }].map((item, i) => (
               <div
@@ -185,11 +183,11 @@ export default function AboutPage() {
                 </div>
 
                 <h3 className="text-2xl font-serif mb-4 text-gray-900 dark:text-white">
-                  {item.title}
+                  <T k={item.title} />
                 </h3>
 
                 <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                  {item.desc}
+                  <T k={item.desc} />
                 </p>
               </div>
             ))}
@@ -206,10 +204,10 @@ export default function AboutPage() {
                 className="text-sm tracking-widest uppercase mb-2"
                 style={{ color: goldenColor }}
               >
-                What We Stand For
+                <T k="aboutPage.whatWeStandFor" />
               </p>
               <h2 className="text-4xl md:text-5xl font-serif text-gray-900 dark:text-white">
-                Our Core Values
+                <T k="aboutPage.ourCoreValues" />
               </h2>
             </div>
 
@@ -227,11 +225,11 @@ export default function AboutPage() {
                   </div>
 
                   <h3 className="text-xl font-serif mb-3 text-gray-900 dark:text-white">
-                    {item.title}
+                    <T k={item.title} />
                   </h3>
 
                   <p className="text-gray-600 dark:text-gray-400 leading-relaxed">
-                    {item.desc}
+                    <T k={item.desc} />
                   </p>
                 </div>
               ))}
@@ -248,39 +246,39 @@ export default function AboutPage() {
       className="text-sm tracking-widest uppercase"
       style={{ color: goldenColor }}
     >
-      Our People
+      <T k="aboutPage.ourPeople" />
     </p>
 
     <h2 className="text-3xl md:text-4xl font-serif mt-2 text-gray-900 dark:text-white">
-      Meet Our Team
+      <T k="aboutPage.meetOurTeam" />
     </h2>
 
     <p className="mt-4 text-gray-600 dark:text-gray-400 text-sm md:text-base">
-      Professionals committed to excellence, integrity, and results.
+      <T k="aboutPage.teamDescription" />
     </p>
   </div>
 
   {/* ================= LEADERSHIP ================= */}
   <div className="mt-20">
     <h3 className="text-center text-xl font-serif mb-12 text-gray-900 dark:text-white">
-      Leadership
+      <T k="aboutPage.leadership" />
     </h3>
 
     <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-12 max-w-5xl mx-auto place-items-center">
       {[
         {
           name: "Ahmed Al Rashid",
-          role: "Founder & CEO",
+          role: "aboutPage.founderCeo",
           image: "/assets/about1.png",
         },
         {
           name: "Sarah Johnson",
-          role: "Managing Director",
+          role: "aboutPage.managingDirector",
           image: "/assets/about1.png",
         },
         {
           name: "Michael Chen",
-          role: "Investment Director",
+          role: "aboutPage.investmentDirector",
           image: "/assets/about1.png",
         },
       ].map((person) => (
@@ -306,7 +304,7 @@ export default function AboutPage() {
             className="text-sm mt-1"
             style={{ color: goldenColor }}
           >
-            {person.role}
+            <T k={person.role} />
           </p>
         </div>
       ))}
@@ -316,39 +314,39 @@ export default function AboutPage() {
   {/* ================= TEAM MEMBERS ================= */}
   <div className="mt-28">
     <h3 className="text-center text-xl font-serif mb-12 text-gray-900 dark:text-white">
-      Our Team
+      <T k="aboutPage.ourTeam" />
     </h3>
 
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 max-w-7xl mx-auto place-items-center">
       {[
         {
           name: "Priya Sharma",
-          role: "Client Relations Manager",
+          role: "aboutPage.clientRelationsManager",
           image: "/assets/about1.png",
         },
         {
           name: "Omar Khalid",
-          role: "Property Consultant",
+          role: "aboutPage.propertyConsultant",
           image: "/assets/about1.png",
         },
         {
           name: "Emily Brown",
-          role: "Sales Executive",
+          role: "aboutPage.salesExecutive",
           image: "/assets/about1.png",
         },
         {
           name: "Arjun Mehta",
-          role: "Market Analyst",
+          role: "aboutPage.marketAnalyst",
           image: "/assets/about1.png",
         },
         {
           name: "Fatima Noor",
-          role: "Customer Support",
+          role: "aboutPage.customerSupport",
           image: "/assets/about1.png",
         },
         {
           name: "Daniel Wong",
-          role: "Operations Manager",
+          role: "aboutPage.operationsManager",
           image: "/assets/about1.png",
         },
       ].map((member) => (
@@ -375,7 +373,7 @@ export default function AboutPage() {
             className="text-sm mt-1"
             style={{ color: goldenColor }}
           >
-            {member.role}
+            <T k={member.role} />
           </p>
         </div>
       ))}

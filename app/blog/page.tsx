@@ -3,6 +3,7 @@ import { allBlogsQuery } from "@/lib/sanity.queries";
 import BlogCard from "@/components/cards/BlogCard";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
+import T from "@/components/ui/T";
 
 export const revalidate = 60;
 
@@ -27,10 +28,10 @@ export default async function BlogPage() {
         {/* Content */}
         <div className="relative z-10 max-w-2xl px-4">
           <h1 className="text-4xl md:text-5xl font-bold">
-            Our Blog
+            <T k="blog.ourBlog" />
           </h1>
           <p className="mt-4 text-gray-200">
-            Latest insights, updates & real estate stories
+            <T k="blog.blogDescription" />
           </p>
         </div>
       </section>
@@ -42,10 +43,10 @@ export default async function BlogPage() {
           {blogs.length === 0 ? (
             <div className="text-center py-20">
               <h2 className="text-2xl font-semibold text-gray-800 dark:text-white">
-                No blogs found
+                <T k="blog.noBlogsFound" />
               </h2>
               <p className="text-gray-500 dark:text-gray-400 mt-3">
-                Please check back later.
+                <T k="blog.checkBackLater" />
               </p>
             </div>
           ) : (

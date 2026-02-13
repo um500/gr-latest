@@ -201,5 +201,16 @@
   "media.title": "मीडिया",
   "media.subtitle": "चित्र और वीडियो",
   "media.image": "चित्र",
-  "media.video": "वीडियो"
+  "media.video": "वीडियो",
+
+  "developerDetail.ourPartner": "हमारे साझेदार",
+  "developerDetail.heroDescription": "दुबई के क्षितिज को आकार देने वाला प्रीमियम रियल एस्टेट डेवलपर",
+  "developerDetail.viewProjects": "प्रोजेक्ट देखें",
+  "developerDetail.yearsExperience": "वर्षों का अनुभव",
+  "developerDetail.projectsDelivered": "प्रोजेक्ट वितरित",
+  "developerDetail.homesSold": "घर बिके",
+  "developerDetail.primeLocations": "प्रमुख स्थान",
+  "developerDetail.about": "के बारे में",
+  "developerDetail.projectsBy": "द्वारा प्रोजेक्ट",
+  "developerDetail.noProjectsYet": "अभी तक कोई प्रोजेक्ट नहीं जोड़ा गया।"
 }

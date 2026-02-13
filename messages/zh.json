@@ -201,5 +201,16 @@
   "media.title": "媒体",
   "media.subtitle": "图片与视频",
   "media.image": "图片",
-  "media.video": "视频"
+  "media.video": "视频",
+
+  "developerDetail.ourPartner": "我们的合作伙伴",
+  "developerDetail.heroDescription": "塑造迪拜天际线的高端房地产开发商",
+  "developerDetail.viewProjects": "查看项目",
+  "developerDetail.yearsExperience": "年经验",
+  "developerDetail.projectsDelivered": "已交付项目",
+  "developerDetail.homesSold": "已售住宅",
+  "developerDetail.primeLocations": "优质地段",
+  "developerDetail.about": "关于",
+  "developerDetail.projectsBy": "项目来自",
+  "developerDetail.noProjectsYet": "暂无项目。"
 }

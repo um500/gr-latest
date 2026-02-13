@@ -8,6 +8,7 @@ import PropertyFilter from "@/components/sections/PropertyFilter";
 import PropertiesClient from "@/components/sections/PropertiesClient";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
+import T from "@/components/ui/T";
 
 type SearchParams = Promise<{
   community?: string;
@@ -53,10 +54,10 @@ export default async function PropertiesPage({
         <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
           <div>
             <h1 className="text-white text-4xl md:text-6xl font-bold">
-              Find Your Dream Property
+              <T k="properties.findDreamProperty" />
             </h1>
             <p className="text-gray-200 mt-4 text-lg">
-              Luxury homes & premium investments in Dubai
+              <T k="properties.heroDescription" />
             </p>
           </div>
         </div>
@@ -74,11 +75,11 @@ export default async function PropertiesPage({
 
             <h2 className="text-2xl md:text-3xl font-semibold 
                            text-gray-900 dark:text-white">
-              No properties found
+              <T k="properties.noPropertiesFound" />
             </h2>
 
             <p className="text-gray-600 dark:text-gray-400 mt-3">
-              Try adjusting your filters or reset your search.
+              <T k="properties.noPropertiesDescription" />
             </p>
           </div>
         ) : (

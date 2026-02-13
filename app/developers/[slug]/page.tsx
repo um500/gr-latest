@@ -3,6 +3,7 @@ import { sanityClient } from "@/lib/sanity.client";
 import { notFound } from "next/navigation";
 import { urlFor } from "@/lib/sanity.image";
 import DeveloperProjectsClient from "@/components/sections/DeveloperProjectsClient";
+import T from "@/components/ui/T";
 
 /* ================= SANITY QUERY ================= */
 const developerWithProjectsQuery = `
@@ -73,7 +74,7 @@ export default async function DeveloperPage({
         <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
           <div className="max-w-4xl">
             <p className="text-yellow-400 tracking-widest uppercase mb-4">
-              Our Partner
+              <T k="developerDetail.ourPartner" />
             </p>
 
             <h1 className="text-white text-4xl md:text-6xl font-bold">
@@ -81,7 +82,7 @@ export default async function DeveloperPage({
             </h1>
 
             <p className="text-gray-200 mt-6 text-lg">
-              Premium real estate developer shaping Dubai’s skyline
+              <T k="developerDetail.heroDescription" />
             </p>
 
             <div className="flex flex-col sm:flex-row justify-center gap-4 mt-8">
@@ -89,14 +90,14 @@ export default async function DeveloperPage({
                 href="#projects"
                 className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold"
               >
-                View Projects
+                <T k="developerDetail.viewProjects" />
               </a>
 
               <a
                 href="/contact"
                 className="bg-yellow-500 text-black px-8 py-3 rounded-lg font-semibold"
               >
-                Enquire Now
+                <T k="nav.enquireNow" />
               </a>
             </div>
           </div>
@@ -113,7 +114,7 @@ export default async function DeveloperPage({
                   {developer.stats.experience}
                 </p>
                 <p className="text-sm uppercase tracking-widest text-gray-500 mt-2">
-                  Years Experience
+                  <T k="developerDetail.yearsExperience" />
                 </p>
               </div>
             )}
@@ -124,7 +125,7 @@ export default async function DeveloperPage({
                   {developer.stats.projects}
                 </p>
                 <p className="text-sm uppercase tracking-widest text-gray-500 mt-2">
-                  Projects Delivered
+                  <T k="developerDetail.projectsDelivered" />
                 </p>
               </div>
             )}
@@ -135,7 +136,7 @@ export default async function DeveloperPage({
                   {developer.stats.homes}
                 </p>
                 <p className="text-sm uppercase tracking-widest text-gray-500 mt-2">
-                  Homes Sold
+                  <T k="developerDetail.homesSold" />
                 </p>
               </div>
             )}
@@ -146,7 +147,7 @@ export default async function DeveloperPage({
                   {developer.stats.locations}
                 </p>
                 <p className="text-sm uppercase tracking-widest text-gray-500 mt-2">
-                  Prime Locations
+                  <T k="developerDetail.primeLocations" />
                 </p>
               </div>
             )}
@@ -158,7 +159,7 @@ export default async function DeveloperPage({
      <section className="py-20 bg-white dark:bg-black transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-6">
-            About {developer.name}
+            <><T k="developerDetail.about" /> {developer.name}</>
           </h2>
 
           <p className="text-gray-600 leading-relaxed max-w-4xl">
@@ -171,11 +172,11 @@ export default async function DeveloperPage({
     <section id="projects" className="py-20 bg-gray-50 dark:bg-black transition-colors duration-300">
         <div className="max-w-7xl mx-auto px-6">
           <h2 className="text-3xl font-bold mb-12">
-            Projects by {developer.name}
+            <><T k="developerDetail.projectsBy" /> {developer.name}</>
           </h2>
 
           {developer.properties?.length === 0 ? (
-            <p className="text-gray-500">No projects added yet.</p>
+            <p className="text-gray-500"><T k="developerDetail.noProjectsYet" /></p>
           ) : (
             <DeveloperProjectsClient
               properties={developer.properties}

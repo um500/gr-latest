@@ -1,4 +1,5 @@
 import Image from "next/image";
+import React from "react";
 import CTA from "@/components/sections/CTA";
 import {
   Search,
@@ -7,6 +8,7 @@ import {
   Headphones,
 } from "lucide-react";
 import Footer from "@/components/layout/Footer";
+import T from "@/components/ui/T";
 
 export default function HowItWorks() {
   return (
@@ -23,14 +25,13 @@ export default function HowItWorks() {
         <div className="absolute inset-0 bg-black/50 flex items-center justify-center text-center px-6">
           <div className="max-w-3xl text-white">
             <p className="tracking-widest text-sm text-yellow-400 mb-3">
-              OUR PROCESS
+              <T k="howItWorks.ourProcess" />
             </p>
             <h1 className="text-4xl md:text-5xl font-serif mb-4">
-              How It Works
+              <T k="howItWorks.title" />
             </h1>
             <p className="text-gray-200">
-              Our streamlined process makes buying property in Dubai simple,
-              transparent, and stress-free.
+              <T k="howItWorks.description" />
             </p>
           </div>
         </div>
@@ -40,14 +41,14 @@ export default function HowItWorks() {
       <Section
         step="01"
         icon={<Search size={18} />}
-        title="Consultation & Discovery"
-        text="We begin by understanding your goals, budget, and preferences. Our experts will guide you through the current market trends and opportunities."
+        title={<T k="howItWorks.step1Title" />}
+        text={<T k="howItWorks.step1Text" />}
         image="/hiw1.png"
         points={[
-          "Personal consultation call or meeting",
-          "Budget and timeline assessment",
-          "Location and property type preferences",
-          "Investment goals discussion",
+          <T key="p1" k="howItWorks.step1Point1" />,
+          <T key="p2" k="howItWorks.step1Point2" />,
+          <T key="p3" k="howItWorks.step1Point3" />,
+          <T key="p4" k="howItWorks.step1Point4" />,
         ]}
       />
 
@@ -55,28 +56,28 @@ export default function HowItWorks() {
         step="02"
         reverse
         icon={<FileText size={18} />}
-        title="Property Selection"
-        text="Based on your requirements, we curate a personalized selection of properties that match your criteria."
+        title={<T k="howItWorks.step2Title" />}
+        text={<T k="howItWorks.step2Text" />}
         image="/hiw2.png"
         points={[
-          "Customized property shortlist",
-          "Virtual and in-person viewings",
-          "Detailed property comparisons",
-          "Market analysis and pricing insights",
+          <T key="p1" k="howItWorks.step2Point1" />,
+          <T key="p2" k="howItWorks.step2Point2" />,
+          <T key="p3" k="howItWorks.step2Point3" />,
+          <T key="p4" k="howItWorks.step2Point4" />,
         ]}
       />
 
       <Section
         step="03"
         icon={<Key size={18} />}
-        title="Purchase & Documentation"
-        text="Our team handles all paperwork and legalities, ensuring a smooth and transparent transaction."
+        title={<T k="howItWorks.step3Title" />}
+        text={<T k="howItWorks.step3Text" />}
         image="/hiw3.png"
         points={[
-          "Price negotiation on your behalf",
-          "Contract review and preparation",
-          "Payment plan arrangement",
-          "Legal documentation support",
+          <T key="p1" k="howItWorks.step3Point1" />,
+          <T key="p2" k="howItWorks.step3Point2" />,
+          <T key="p3" k="howItWorks.step3Point3" />,
+          <T key="p4" k="howItWorks.step3Point4" />,
         ]}
       />
 
@@ -84,14 +85,14 @@ export default function HowItWorks() {
         step="04"
         reverse
         icon={<Headphones size={18} />}
-        title="Handover & Beyond"
-        text="We support you through the handover process and continue to assist with property management if needed."
+        title={<T k="howItWorks.step4Title" />}
+        text={<T k="howItWorks.step4Text" />}
         image="/hiw4.png"
         points={[
-          "Property inspection and handover",
-          "Snagging and defect resolution",
-          "Property management services",
-          "Rental and resale assistance",
+          <T key="p1" k="howItWorks.step4Point1" />,
+          <T key="p2" k="howItWorks.step4Point2" />,
+          <T key="p3" k="howItWorks.step4Point3" />,
+          <T key="p4" k="howItWorks.step4Point4" />,
         ]}
       />
 
@@ -111,7 +112,15 @@ function Section({
   points,
   icon,
   reverse = false,
-}: any) {
+}: {
+  step: string;
+  title: React.ReactNode;
+  text: React.ReactNode;
+  image: string;
+  points: React.ReactNode[];
+  icon: React.ReactNode;
+  reverse?: boolean;
+}) {
   return (
     <section className="py-20 bg-[#F8F5ED] dark:bg-[#111827] transition-colors duration-300">
       <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -121,7 +130,7 @@ function Section({
           <div className="rounded-2xl overflow-hidden shadow-lg">
             <Image
               src={image}
-              alt={title}
+              alt={typeof title === "string" ? title : step}
               width={600}
               height={420}
               className="object-cover w-full h-auto"
@@ -152,7 +161,7 @@ function Section({
           </p>
 
           <ul className="space-y-3">
-            {points.map((p: string, i: number) => (
+            {points.map((p: React.ReactNode, i: number) => (
               <li key={i} className="flex items-center gap-3">
                 <span className="w-5 h-5 rounded-full border border-[#C9A227] flex items-center justify-center text-[#C9A227] text-xs">
                   ✓

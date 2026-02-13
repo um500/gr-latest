@@ -5,8 +5,10 @@ import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import Footer from "@/components/layout/Footer";
 import CTA from "@/components/sections/CTA";
+import { useTranslation } from "@/lib/language-context";
 
 export default function ContactPage() {
+  const { t } = useTranslation();
   const [loading, setLoading] = useState(false);
   const [success, setSuccess] = useState("");
   const [error, setError] = useState("");
@@ -25,11 +27,11 @@ export default function ContactPage() {
         "lVPUd6uuppl88FX8U"
       )
       .then(() => {
-        setSuccess("Enquiry sent successfully ✅");
+        setSuccess(t("form.successMessage"));
         e.target.reset();
       })
       .catch(() => {
-        setError("Something went wrong. Please try again ❌");
+        setError(t("form.errorMessage"));
       })
       .finally(() => setLoading(false));
   };
@@ -46,10 +48,10 @@ export default function ContactPage() {
         />
         <div className="absolute inset-0 bg-black/60" />
         <div className="relative z-10 px-4 max-w-3xl">
-          <p className="tracking-widest text-yellow-400 mb-2">GET IN TOUCH</p>
-          <h1 className="text-4xl sm:text-5xl font-serif mb-4">Contact Us</h1>
+          <p className="tracking-widest text-yellow-400 mb-2">{t("contact.getInTouch")}</p>
+          <h1 className="text-4xl sm:text-5xl font-serif mb-4">{t("contact.contactUs")}</h1>
           <p className="text-gray-200 text-sm sm:text-base">
-            Start your property journey with confidence.
+            {t("contact.heroDescription")}
           </p>
         </div>
       </section>
@@ -60,18 +62,18 @@ export default function ContactPage() {
         {/* LEFT INFO */}
         <div>
           <p className="text-yellow-500 tracking-widest mb-2">
-            CONTACT INFORMATION
+            {t("contact.contactInformation")}
           </p>
           <h2 className="text-3xl font-serif mb-8 dark:text-white">
-            Get in Touch
+            {t("contact.getInTouchTitle")}
           </h2>
 
           <div className="space-y-6">
-            <Info icon={<MapPin />} title="Office Address"
+            <Info icon={<MapPin />} title={t("contact.officeAddress")}
               text={`Business Bay, Churchill Towers\nDubai, United Arab Emirates`} />
-            <Info icon={<Phone />} title="Phone" text="+971 50 123 4567" />
-            <Info icon={<Mail />} title="Email" text="info@grpremium.com" />
-            <Info icon={<Clock />} title="Working Hours"
+            <Info icon={<Phone />} title={t("contact.phone")} text="+971 50 123 4567" />
+            <Info icon={<Mail />} title={t("contact.email")} text="info@grpremium.com" />
+            <Info icon={<Clock />} title={t("contact.workingHours")}
               text={`Mon – Sat: 9:00 AM – 6:00 PM\nSunday: By Appointment`} />
           </div>
 
@@ -89,18 +91,18 @@ export default function ContactPage() {
         {/* RIGHT FORM */}
         <div className="bg-white dark:bg-[#111827] border-2 border-[#C9A227] rounded-2xl p-6 sm:p-8 shadow-sm self-start transition-colors duration-300">
           <h3 className="text-2xl font-serif mb-6 dark:text-white">
-            Send Us an Enquiry
+            {t("contact.sendUsEnquiry")}
           </h3>
 
           <form onSubmit={handleSubmit} className="grid grid-cols-1 sm:grid-cols-2 gap-5">
 
-            <Input name="name" label="Full Name" placeholder="Enter your full name" />
-            <Input name="email" label="Email" type="email" placeholder="your@email.com" />
-            <Input name="phone" label="Phone Number" placeholder="+971 XX XXX XXXX" />
+            <Input name="name" label={t("form.fullName")} placeholder={t("form.enterFullName")} />
+            <Input name="email" label={t("form.email")} type="email" placeholder={t("form.emailPlaceholder")} />
+            <Input name="phone" label={t("form.phoneNumber")} placeholder={t("form.phonePlaceholder")} />
 
             <InputSelect
               name="country"
-              label="Country of Residence"
+              label={t("form.countryOfResidence")}
               options={[
                 "United Arab Emirates",
                 "India",
@@ -114,7 +116,7 @@ export default function ContactPage() {
             {/* INTERESTED PROPERTY */}
             <div className="sm:col-span-2 relative">
               <label className="text-sm font-medium dark:text-gray-200">
-                Interested Property <span className="text-red-500">*</span>
+                {t("form.interestedProperty")} <span className="text-red-500">*</span>
               </label>
 
               <select
@@ -126,7 +128,7 @@ export default function ContactPage() {
                            px-4 py-3 appearance-none
                            focus:outline-none focus:ring-2 focus:ring-[#C9A227]"
               >
-                <option value="">Select a property</option>
+                <option value="">{t("form.selectProperty")}</option>
                 <option>Emaar</option>
                 <option>Damac</option>
                 <option>Danube</option>
@@ -150,7 +152,7 @@ export default function ContactPage() {
             <div className="sm:col-span-2 flex items-start gap-3 mt-2">
               <input type="checkbox" required className="mt-1" />
               <p className="text-sm text-gray-700 dark:text-gray-300">
-                I authorize company representatives to contact me about its products and offers.
+                {t("contact.consent")}
               </p>
             </div>
 
@@ -165,7 +167,7 @@ export default function ContactPage() {
                            transition font-medium"
               >
                 <Send size={18} />
-                {loading ? "Sending..." : "Send Enquiry"}
+                {loading ? t("form.sending") : t("form.sendEnquiry")}
               </button>
 
               {success && (

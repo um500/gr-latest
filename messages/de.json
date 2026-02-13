@@ -201,5 +201,16 @@
   "media.title": "Medien",
   "media.subtitle": "Bilder und Videos",
   "media.image": "Bild",
-  "media.video": "Video"
+  "media.video": "Video",
+
+  "developerDetail.ourPartner": "Unser Partner",
+  "developerDetail.heroDescription": "Premium-Immobilienentwickler, der Dubais Skyline prägt",
+  "developerDetail.viewProjects": "Projekte ansehen",
+  "developerDetail.yearsExperience": "Jahre Erfahrung",
+  "developerDetail.projectsDelivered": "Projekte geliefert",
+  "developerDetail.homesSold": "Häuser verkauft",
+  "developerDetail.primeLocations": "Top-Standorte",
+  "developerDetail.about": "Über",
+  "developerDetail.projectsBy": "Projekte von",
+  "developerDetail.noProjectsYet": "Noch keine Projekte hinzugefügt."
 }

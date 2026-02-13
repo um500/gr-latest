@@ -4,6 +4,7 @@ import Link from "next/link";
 import Image from "next/image";
 import CTA from "@/components/sections/CTA";
 import Footer from "@/components/layout/Footer";
+import T from "@/components/ui/T";
 
 /* ================= SANITY QUERY ================= */
 const query = `
@@ -46,17 +47,15 @@ export default async function DevelopersPage() {
         <div className="relative z-10 flex h-full items-center justify-center px-6">
           <div className="max-w-4xl text-center">
             <p className="text-yellow-400 tracking-widest uppercase mb-4 text-sm md:text-base">
-              Our Partners
+              <T k="developersPage.ourPartners" />
             </p>
 
             <h1 className="text-white text-4xl md:text-6xl font-bold leading-tight">
-              Top Real Estate Developers in Dubai
+              <T k="developersPage.heroTitle" />
             </h1>
 
             <p className="text-gray-200 mt-6 text-base md:text-lg">
-              We collaborate with Dubai’s most trusted developers to bring you
-              world-class residential and commercial properties designed for
-              luxury living and high investment returns.
+              <T k="developersPage.heroDescription" />
             </p>
           </div>
         </div>
@@ -68,16 +67,15 @@ export default async function DevelopersPage() {
         {/* HEADING */}
         <div className="text-center mb-14">
           <p className="text-[#C9A227] uppercase tracking-widest text-sm">
-            Our Developers
+            <T k="developersPage.ourDevelopers" />
           </p>
 
           <h2 className="text-3xl md:text-4xl font-bold mt-2 text-gray-900 dark:text-white">
-            Top Real Estate Developers in Dubai
+            <T k="developersPage.sectionTitle" />
           </h2>
 
           <p className="text-gray-600 dark:text-gray-400 mt-4 max-w-2xl mx-auto">
-            We work with Dubai’s most trusted and reputed developers to bring you
-            premium residential and commercial projects.
+            <T k="developersPage.sectionDescription" />
           </p>
         </div>
 
@@ -99,7 +97,7 @@ export default async function DevelopersPage() {
                   />
                 ) : (
                   <div className="flex h-full items-center justify-center text-gray-400">
-                    No Image
+                    <T k="developersPage.noImage" />
                   </div>
                 )}
               </div>
@@ -120,7 +118,7 @@ export default async function DevelopersPage() {
                   href={`/developers/${dev.slug}`}
                   className="inline-flex items-center mt-5 text-[#C9A227] font-medium hover:underline"
                 >
-                  View Projects →
+                  <T k="developersPage.viewProjects" />
                 </Link>
               </div>
             </div>
