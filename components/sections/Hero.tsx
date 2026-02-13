@@ -10,14 +10,18 @@ import { useTranslation } from "@/lib/language-context";
 interface HeroSlide {
   title: string;
   subtitle?: string;
+  title_hi?: string;
+  title_ar?: string;
+  title_ru?: string;
+  subtitle_hi?: string;
+  subtitle_ar?: string;
+  subtitle_ru?: string;
   image?: {
     asset?: {
       url?: string;
     };
   };
   active?: boolean;
-
-  // ✅ ADD THIS
   linkedProperty?: {
     _id: string;
     title: string;
@@ -27,7 +31,7 @@ interface HeroSlide {
       slug: string;
     };
   };
-
+  [key: string]: any;
 }
 
 
@@ -40,6 +44,9 @@ interface Community {
 interface HeroProps {
   slides: HeroSlide[];
   ctaText: string;
+  ctaText_hi?: string;
+  ctaText_ar?: string;
+  ctaText_ru?: string;
   communities: Community[];
 }
 
@@ -51,11 +58,22 @@ const PLACEHOLDER_IMAGE = "/images/placeholder.png";
 export default function Hero({
   slides = [],
   ctaText,
+  ctaText_hi,
+  ctaText_ar,
+  ctaText_ru,
   communities = [],
 }: HeroProps) {
   const router = useRouter();
   const searchRef = useRef<HTMLDivElement>(null);
-  const { t } = useTranslation();
+  const { t, lang } = useTranslation();
+
+  const getSlideText = (slide: HeroSlide, field: string) => {
+    if (lang === "en") return slide[field];
+    return slide[`${field}_${lang}`] || slide[field];
+  };
+
+  const localizedCTA = lang === "en" ? ctaText
+    : (lang === "hi" ? ctaText_hi : lang === "ar" ? ctaText_ar : ctaText_ru) || ctaText;
 
   /* ================= SAFE SLIDES ================= */
 
@@ -186,12 +204,12 @@ export default function Hero({
       <div className="relative z-30 h-full flex items-center">
         <div className="max-w-5xl px-6 md:ml-36 w-full">
           <h1 className="text-4xl md:text-6xl font-serif font-bold">
-            {slidesToUse[index].title}
+            {getSlideText(slidesToUse[index], "title")}
           </h1>
 
           {slidesToUse[index].subtitle && (
             <p className="mt-4 text-gray-200 text-lg">
-              {slidesToUse[index].subtitle}
+              {getSlideText(slidesToUse[index], "subtitle")}
             </p>
           )}
 
@@ -206,7 +224,7 @@ export default function Hero({
             }}
             className="mt-8 px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition"
           >
-            {ctaText}
+            {localizedCTA}
           </button>
 
 

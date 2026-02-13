@@ -33,6 +33,9 @@ export default async function Home() {
       <Hero
         slides={heroSlides}
         ctaText={homepage?.heroCTA || "Explore Properties"}
+        ctaText_hi={homepage?.heroCTA_hi}
+        ctaText_ar={homepage?.heroCTA_ar}
+        ctaText_ru={homepage?.heroCTA_ru}
         communities={communities || []}
       />
 
