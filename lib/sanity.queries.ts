@@ -293,8 +293,10 @@ export const announcementQuery = groq`
 *[_type == "announcement"]
 | order(_createdAt desc){
   title,
+  title_hi, title_es, title_fr, title_de, title_zh, title_ar, title_pt, title_ru, title_ja,
   eventDate,
   city,
+  city_hi, city_es, city_fr, city_de, city_zh, city_ar, city_pt, city_ru, city_ja,
   "slug": slug.current
 }
 `;

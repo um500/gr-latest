@@ -1,5 +1,17 @@
 import { defineType, defineField } from "sanity";
 
+const LANGUAGES = [
+  { id: "hi", title: "Hindi" },
+  { id: "es", title: "Spanish" },
+  { id: "fr", title: "French" },
+  { id: "de", title: "German" },
+  { id: "zh", title: "Chinese" },
+  { id: "ar", title: "Arabic" },
+  { id: "pt", title: "Portuguese" },
+  { id: "ru", title: "Russian" },
+  { id: "ja", title: "Japanese" },
+];
+
 export default defineType({
   name: "announcement",
   title: "Top Announcement",
@@ -8,10 +20,18 @@ export default defineType({
 
     defineField({
       name: "title",
-      title: "Title",
+      title: "Title (English)",
       type: "string",
       validation: (Rule) => Rule.required(),
     }),
+
+    ...LANGUAGES.map((lang) =>
+      defineField({
+        name: `title_${lang.id}`,
+        title: `Title (${lang.title})`,
+        type: "string",
+      })
+    ),
 
     defineField({
       name: "eventDate",
@@ -21,11 +41,18 @@ export default defineType({
 
     defineField({
       name: "city",
-      title: "City",
+      title: "City (English)",
       type: "string",
     }),
 
-    // ✅ VERY IMPORTANT (For View Details Page)
+    ...LANGUAGES.map((lang) =>
+      defineField({
+        name: `city_${lang.id}`,
+        title: `City (${lang.title})`,
+        type: "string",
+      })
+    ),
+
     defineField({
       name: "slug",
       title: "Slug",
@@ -37,7 +64,6 @@ export default defineType({
       validation: (Rule) => Rule.required(),
     }),
 
-    // ✅ Optional (For detail page content)
     defineField({
       name: "description",
       title: "Description",
