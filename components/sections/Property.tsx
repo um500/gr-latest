@@ -15,11 +15,13 @@ export default function Property({ properties }: PropertyProps) {
   const [selectedProperty, setSelectedProperty] = useState<any>(null);
   const { t } = useTranslation();
 
+  if (!properties?.length) return null;
+
   return (
     <section className="py-24 px-6 bg-[#E5E7EB] dark:bg-[#0F172A] transition-colors duration-300">
       <div className="max-w-7xl mx-auto">
 
-        {/* Heading */}
+        {/* ================= HEADING ================= */}
         <div className="text-center max-w-2xl mx-auto mb-16">
           <p className="text-sm tracking-[0.2em] font-semibold uppercase mb-4 text-[#C9A227]">
             {t("property.projects")}
@@ -34,9 +36,9 @@ export default function Property({ properties }: PropertyProps) {
           </p>
         </div>
 
-        {/* Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10">
-          {properties?.map((property: any) => (
+        {/* ================= GRID (3 CARDS ONLY) ================= */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+          {properties.map((property: any) => (
             <PropertyCard
               key={property._id}
               property={property}
@@ -48,39 +50,24 @@ export default function Property({ properties }: PropertyProps) {
           ))}
         </div>
 
+        {/* ================= VIEW ALL BUTTON ================= */}
+        <div className="text-center mt-16">
+          <Link
+            href="/properties"
+            className="inline-flex items-center gap-2 px-10 py-4 border-2 border-[#C9A227] text-[#C9A227] rounded-full hover:bg-[#C9A227] hover:text-black transition-all duration-300"
+          >
+            {t("property.viewAllProperties")}
+          </Link>
+        </div>
+
       </div>
 
-      {/* Modal */}
+      {/* ================= MODAL ================= */}
       <EnquiryModal
         open={openEnquiry}
         onClose={() => setOpenEnquiry(false)}
         propertyName={selectedProperty?.title}
       />
-
-
-      {/* VIEW ALL BUTTON */}
-        <div className="text-center mt-16">
-          <Link
-            href="/properties"
-            className="
-              inline-flex 
-              items-center 
-              gap-2 
-              px-10 
-              py-4 
-              border-2 
-              border-[#C9A227] 
-              text-[#C9A227] 
-              rounded-full 
-              hover:bg-[#C9A227] 
-              hover:text-black 
-              transition-all 
-              duration-300
-            "
-          >
-            {t("property.viewAllProperties")}
-          </Link>
-        </div>
     </section>
   );
 }

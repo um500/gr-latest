@@ -1,8 +1,8 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { MapPin, Phone, Mail } from "lucide-react";
-import { SiFacebook, SiInstagram, SiX, SiLinkedin } from "react-icons/si";
+import { MapPin, Phone, Mail, ChevronUp } from "lucide-react";
+import { SiFacebook, SiInstagram, SiGoogle, SiLinkedin } from "react-icons/si";
 import Image from "next/image";
 import Link from "next/link";
 import EnquiryModal from "@/components/ui/EnquiryModal";
@@ -12,20 +12,31 @@ const goldenColor = "#D4A843";
 
 export default function Footer() {
   const [open, setOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
   const { t } = useTranslation();
 
-  /* ===== Scroll Lock Fix ===== */
   useEffect(() => {
     if (open) {
       document.body.style.overflow = "hidden";
     } else {
       document.body.style.overflow = "";
     }
-
     return () => {
       document.body.style.overflow = "";
     };
   }, [open]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.scrollY > 400);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  };
 
   return (
     <>
@@ -59,7 +70,7 @@ export default function Footer() {
 
               {/* Social Icons */}
               <div className="flex items-center gap-3">
-                {[SiFacebook, SiInstagram, SiX, SiLinkedin].map((Icon, i) => (
+                {[SiFacebook, SiInstagram, SiGoogle, SiLinkedin].map((Icon, i) => (
                   <a
                     key={i}
                     href="#"
@@ -135,12 +146,16 @@ export default function Footer() {
 
                 <li className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-[#D4A843]" />
-                  +971 50 123 4567
+                  <a href="tel:+919330230426" className="hover:text-white transition-colors duration-300">
+                    +91 - 9330230426
+                  </a>
                 </li>
 
                 <li className="flex items-center gap-3">
                   <Mail className="w-4 h-4 text-[#D4A843]" />
-                  info@grpremium.com
+                  <a href="mailto:sales@grpremium.com" className="hover:text-white transition-colors duration-300">
+                    sales@grpremium.com
+                  </a>
                 </li>
               </ul>
 
@@ -159,13 +174,24 @@ export default function Footer() {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-[#2a3a4a] py-6 text-center">
-          <p className="text-xs text-gray-500">
-            {t("footer.copyright")}
-          </p>
+        <div className="border-t border-[#2a3a4a] py-5">
+          <div className="max-w-7xl mx-auto px-6 sm:px-8 flex flex-col sm:flex-row items-center justify-between gap-3">
+            <p className="text-xs text-gray-500">
+              &copy; Copyright 2026 G R Premium Properties LLC. Designed By Asiatech Inc. All Rights Reserved.
+            </p>
+            <div className="flex items-center gap-6 text-xs text-gray-500">
+              <Link href="/privacy-policy" className="hover:text-white transition-colors duration-300">
+                Privacy Policy
+              </Link>
+              <Link href="/terms-conditions" className="hover:text-white transition-colors duration-300">
+                Terms & Conditions
+              </Link>
+            </div>
+          </div>
         </div>
       </footer>
 
+      
       {/* GLOBAL ENQUIRY MODAL */}
       <EnquiryModal
         open={open}

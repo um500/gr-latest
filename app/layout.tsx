@@ -8,7 +8,7 @@ import { FloatingButtons } from "@/components/ui/FloatingButtons";
 import AnnouncementBar from "@/components/layout/AnnouncementBar";
 import { ThemeProvider } from "next-themes";
 import { LanguageProvider } from "@/lib/language-context";
-
+import AutoPopupEnquiry from "@/components/ui/AutoPopupEnquiry"; // ✅ ADD THIS
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,22 +33,31 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" suppressHydrationWarning>
-  <body className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0F172A] text-white`}>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased bg-[#0F172A] text-white`}
+      >
+        <LanguageProvider>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="light"
+            enableSystem
+          >
+            <AnnouncementBar />
 
-    <LanguageProvider>
-    <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+            <NavbarServer />
 
-      <AnnouncementBar />
-      <NavbarServer />
+            <main className="w-full">{children}</main>
 
-      <main className="w-full">{children}</main>
+            
 
-      <FloatingButtons />
+            <FloatingButtons />
 
-    </ThemeProvider>
-    </LanguageProvider>
-  </body>
-</html>
+            {/* ✅ AUTO POPUP GLOBAL MOUNT */}
+            <AutoPopupEnquiry />
 
+          </ThemeProvider>
+        </LanguageProvider>
+      </body>
+    </html>
   );
 }

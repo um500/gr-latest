@@ -23,7 +23,8 @@ export default defineType({
       options: {
         list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
       },
-      description: "Select which languages this content supports. English is always included.",
+      description:
+        "Select which languages this content supports. English is always included.",
       group: "content",
     }),
 
@@ -115,11 +116,14 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ FIXED FIELD NAME
     defineField({
-      name: "featured",
-      title: "Featured Developer",
+      name: "showOnHomePage",
+      title: "Show on Home Page",
       type: "boolean",
       initialValue: false,
+      description:
+        "Check this if you want this developer to appear on the Home page.",
       group: "content",
     }),
 
@@ -131,7 +135,9 @@ export default defineType({
         rows: 3,
         group: "translations",
         hidden: ({ document }) =>
-          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+          !((document?.supportedLanguages as string[]) || []).includes(
+            lang.id
+          ),
       }),
       defineField({
         name: `about_${lang.id}`,
@@ -140,7 +146,9 @@ export default defineType({
         rows: 5,
         group: "translations",
         hidden: ({ document }) =>
-          !((document?.supportedLanguages as string[]) || []).includes(lang.id),
+          !((document?.supportedLanguages as string[]) || []).includes(
+            lang.id
+          ),
       }),
     ]),
   ],

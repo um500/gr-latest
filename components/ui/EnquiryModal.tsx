@@ -29,13 +29,10 @@ export default function EnquiryModal({
       {/* SCROLL AREA */}
       <div className="fixed inset-0 overflow-y-auto">
 
-        {/* SPACING WRAPPER */}
         <div className="min-h-full flex justify-center items-start pt-24 pb-16 px-4">
 
-          {/* MODAL BOX */}
           <div className="relative bg-white w-full max-w-lg rounded-2xl p-6 shadow-2xl">
 
-            {/* CLOSE BUTTON */}
             <button
               onClick={onClose}
               className="absolute top-4 right-4 text-gray-500 hover:text-black"
@@ -43,12 +40,10 @@ export default function EnquiryModal({
               <X size={22} />
             </button>
 
-            {/* TITLE */}
             <h2 className="text-xl font-semibold mb-6 text-center">
               {t("enquiryModal.title")}
             </h2>
 
-            {/* FORM */}
             <EnquiryForm
               defaultProperty={propertyName}
               onClose={onClose}

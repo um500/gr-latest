@@ -38,11 +38,13 @@ export const homepageHeroQuery = groq`
 /* ======================================================
    FEATURED PROPERTIES (HOME – TOP 4)
 ====================================================== */
-
 export const featuredPropertiesQuery = groq`
-*[_type == "property"]
+*[
+  _type == "property" &&
+  showOnHomePage == true
+]
 | order(_createdAt desc)
-[0..3]{
+[0...3]{
   _id,
   title,
   title_hi, title_ar, title_ru,
@@ -73,6 +75,7 @@ export const featuredPropertiesQuery = groq`
   }
 }
 `;
+
 
 /* ======================================================
    ALL PROPERTIES (FILTER PAGE)
@@ -213,8 +216,11 @@ export const propertiesByDeveloperQuery = groq`
 ====================================================== */
 
 export const featuredDevelopersQuery = groq`
-*[_type == "developer" && featured == true]
-| order(_createdAt asc)
+*[
+  _type == "developer" &&
+  showOnHomePage == true
+]
+| order(_createdAt desc)
 [0...3]{
   _id,
   name,
@@ -228,6 +234,7 @@ export const featuredDevelopersQuery = groq`
   "heroImage": heroImage.asset->url
 }
 `;
+
 
 export const allDevelopersQuery = groq`
 *[_type == "developer"]
@@ -331,6 +338,29 @@ export const getSingleBlogQuery = groq`
 }
 `;
 
+export const featuredBlogsQuery = groq`
+*[
+  _type == "blog" &&
+  showOnHomePage == true
+]
+| order(_createdAt desc)
+[0...3]{
+  _id,
+  title,
+  title_hi, title_ar, title_ru,
+  subtitle,
+  subtitle_hi, subtitle_ar, subtitle_ru,
+  excerpt,
+  excerpt_hi, excerpt_ar, excerpt_ru,
+  supportedLanguages,
+  "slug": slug.current,
+  mainImage{
+    asset->{ url }
+  }
+}
+`;
+
+
 /* ======================================================
    MEDIA
 ====================================================== */
@@ -350,21 +380,54 @@ export const mediaQuery = groq`
 `;
 
 /* ======================================================
-   ANNOUNCEMENTS
+   ANNOUNCEMENTS (ALL)
 ====================================================== */
 
 export const announcementQuery = groq`
 *[_type == "announcement"]
 | order(_createdAt desc){
+  _id,
+
   title,
   title_hi, title_ar, title_ru,
+
   description,
   description_hi, description_ar, description_ru,
+
+  points,
+  points_hi, points_ar, points_ru,
+
   eventDate,
+
   city,
   city_hi, city_ar, city_ru,
+
   supportedLanguages,
-  "slug": slug.current
+
+  "slug": slug.current,
+
+  mainImage{
+    asset->{ url }
+  }
 }
+`;
+
+export const singleAnnouncementQuery = groq`
+  *[_type == "announcement" && slug.current == $slug][0]{
+    _id,
+    title,
+    title_hi, title_ar, title_ru,
+    description,
+    description_hi, description_ar, description_ru,
+    points,
+    points_hi, points_ar, points_ru,
+    eventDate,
+    city,
+    city_hi, city_ar, city_ru,
+    supportedLanguages,
+    mainImage{
+      asset->{ url }
+    }
+  }
 `;
 

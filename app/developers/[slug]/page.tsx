@@ -5,6 +5,7 @@ import { urlFor } from "@/lib/sanity.image";
 import DeveloperProjectsClient from "@/components/sections/DeveloperProjectsClient";
 import DeveloperAboutClient from "@/components/sections/DeveloperAboutClient";
 import T from "@/components/ui/T";
+import Footer from "@/components/layout/Footer";
 
 /* ================= SANITY QUERY ================= */
 const developerWithProjectsQuery = `
@@ -182,6 +183,7 @@ export default async function DeveloperPage({
 
       {/* ================= CTA ================= */}
       <CTA />
+      <Footer />
     </main>
   );
 }
