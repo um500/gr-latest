@@ -141,7 +141,7 @@ export default function PropertyCard({
                 <div className="flex items-center gap-2 mb-2">
                   <Percent size={16} />
                   <span className="text-sm font-semibold">
-                    {t("property.paymentPlan") || "Payment Plan"}
+                    {t("Payment Plan") || "Payment Plan"}
                   </span>
                 </div>
 
