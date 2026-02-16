@@ -7,7 +7,7 @@ export default defineConfig({
   name: 'default',
   title: 'auth_project',
 
-  projectId: 'zz0dttra',
+  projectId: 'z41lx17j',
   dataset: 'production',
 
   plugins: [structureTool(), visionTool()],
