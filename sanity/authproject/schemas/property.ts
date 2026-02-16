@@ -103,34 +103,36 @@ export default defineType({
     }),
 
     // ✅ Units
-    defineField({
-      name: "units",
-      title: "Available Units",
-      type: "array",
-      of: [
+defineField({
+  name: "units",
+  title: "Available Units",
+  type: "array",
+  of: [
+    {
+      type: "object",
+      fields: [
         {
-          type: "object",
-          fields: [
-            {
-              name: "beds",
-              title: "Bedrooms",
-              type: "string",
-            },
-            {
-              name: "size",
-              title: "Size (Sq Ft)",
-              type: "string",
-            },
-            {
-              name: "price",
-              title: "Starting Price",
-              type: "string",
-            },
-          ],
+          name: "label",
+          title: "Unit Label",
+          type: "string",
+          description: "Example: Office, Studio, 1 BR, Executive Office",
+        },
+        {
+          name: "size",
+          title: "Size (Sq Ft)",
+          type: "string",
+        },
+        {
+          name: "price",
+          title: "Starting Price",
+          type: "string",
         },
       ],
-      group: "content",
-    }),
+    },
+  ],
+  group: "content",
+}),
+
 
     // ✅ Handover
     defineField({
