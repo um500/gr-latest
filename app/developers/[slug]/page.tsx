@@ -28,6 +28,13 @@ const developerWithProjectsQuery = `
     slug,
     location,
     handover,
+
+    paymentPlan{
+      booking,
+      construction,
+      handover
+    },
+
     images[]{
       asset->{url}
     },
@@ -35,10 +42,14 @@ const developerWithProjectsQuery = `
       beds,
       size,
       price
+    },
+    brochure{
+      asset->{url}
     }
   }
 }
 `;
+
 
 export default async function DeveloperPage({
   params,

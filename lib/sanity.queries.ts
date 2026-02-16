@@ -53,6 +53,12 @@ export const featuredPropertiesQuery = groq`
   handover,
   featured,
 
+  paymentPlan{
+    booking,
+    construction,
+    handover
+  },
+
   location->{
     name,
     name_hi, name_ar, name_ru,
@@ -75,6 +81,7 @@ export const featuredPropertiesQuery = groq`
   }
 }
 `;
+
 
 
 /* ======================================================
@@ -106,6 +113,12 @@ export const propertiesQuery = groq`
   purpose,
   type,
 
+  paymentPlan{
+    booking,
+    construction,
+    handover
+  },
+
   location->{
     name,
     name_hi, name_ar, name_ru,
@@ -129,6 +142,7 @@ export const propertiesQuery = groq`
 }
 `;
 
+
 /* ======================================================
    SINGLE PROPERTY
 ====================================================== */
@@ -144,6 +158,12 @@ export const propertyBySlugQuery = groq`
   featured,
   purpose,
   type,
+
+  paymentPlan{
+    booking,
+    construction,
+    handover
+  },
 
   developer->{
     name,
@@ -173,8 +193,9 @@ export const propertyBySlugQuery = groq`
 }
 `;
 
+
 /* ======================================================
-   ✅ PROPERTIES BY DEVELOPER (MISSING FIX)
+   ✅ PROPERTIES BY DEVELOPER
 ====================================================== */
 
 export const propertiesByDeveloperQuery = groq`
@@ -182,15 +203,30 @@ export const propertiesByDeveloperQuery = groq`
 | order(_createdAt desc){
   _id,
   title,
-  title_hi, title_ar, title_ru,
+  title_hi,
+  title_ar,
+  title_ru,
   supportedLanguages,
   "slug": slug.current,
   handover,
   featured,
 
+  paymentPlan{
+    booking,
+    construction,
+    handover
+  },
+
+  developer->{
+    name,
+    "slug": slug.current
+  },
+
   location->{
     name,
-    name_hi, name_ar, name_ru,
+    name_hi,
+    name_ar,
+    name_ru,
     supportedLanguages,
     "slug": slug.current
   },
@@ -210,6 +246,8 @@ export const propertiesByDeveloperQuery = groq`
   }
 }
 `;
+
+
 
 /* ======================================================
    DEVELOPERS

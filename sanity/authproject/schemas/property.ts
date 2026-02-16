@@ -10,24 +10,31 @@ export default defineType({
   name: "property",
   title: "Property",
   type: "document",
+
   groups: [
     { name: "content", title: "Content", default: true },
     { name: "translations", title: "Translations" },
   ],
+
   fields: [
+    // ✅ Supported Languages
     defineField({
       name: "supportedLanguages",
       title: "Supported Languages",
       type: "array",
       of: [{ type: "string" }],
       options: {
-        list: LANGUAGES.map((l) => ({ title: l.title, value: l.id })),
+        list: LANGUAGES.map((l) => ({
+          title: l.title,
+          value: l.id,
+        })),
       },
       description:
         "Select which languages this content supports. English is always included.",
       group: "content",
     }),
 
+    // ✅ Title
     defineField({
       name: "title",
       title: "Property Title",
@@ -36,6 +43,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Slug
     defineField({
       name: "slug",
       title: "Slug",
@@ -48,6 +56,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Developer Reference
     defineField({
       name: "developer",
       title: "Developer",
@@ -57,6 +66,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Community Reference
     defineField({
       name: "location",
       title: "Community",
@@ -66,6 +76,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Images
     defineField({
       name: "images",
       title: "Property Images",
@@ -79,6 +90,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Brochure
     defineField({
       name: "brochure",
       title: "Brochure PDF",
@@ -90,6 +102,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Units
     defineField({
       name: "units",
       title: "Available Units",
@@ -119,6 +132,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ Handover
     defineField({
       name: "handover",
       title: "Handover Date",
@@ -127,7 +141,38 @@ export default defineType({
       group: "content",
     }),
 
-    // ✅ FIXED FIELD NAME
+    // ✅ NEW PAYMENT PLAN FIELD
+    defineField({
+      name: "paymentPlan",
+      title: "Payment Plan",
+      type: "object",
+      group: "content",
+      fields: [
+        {
+          name: "booking",
+          title: "Booking (%)",
+          type: "number",
+          validation: (Rule) =>
+            Rule.min(0).max(100).warning("Enter value between 0-100"),
+        },
+        {
+          name: "construction",
+          title: "During Construction (%)",
+          type: "number",
+          validation: (Rule) =>
+            Rule.min(0).max(100).warning("Enter value between 0-100"),
+        },
+        {
+          name: "handover",
+          title: "On Handover (%)",
+          type: "number",
+          validation: (Rule) =>
+            Rule.min(0).max(100).warning("Enter value between 0-100"),
+        },
+      ],
+    }),
+
+    // ✅ Show on Home Page
     defineField({
       name: "showOnHomePage",
       title: "Show on Home Page",
@@ -138,6 +183,7 @@ export default defineType({
       group: "content",
     }),
 
+    // ✅ TRANSLATIONS
     ...LANGUAGES.flatMap((lang) => [
       defineField({
         name: `title_${lang.id}`,
